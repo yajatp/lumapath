@@ -1,0 +1,24 @@
+{
+  "features": [
+    "coverage",
+    "contrast",
+    "semanticScore",
+    "associationScore",
+    "disagreement"
+  ],
+  "geometryAuthority": false,
+  "manifestSHA256": "77115af503292409a5dcc07b795fbf24520c49ac7b6c2687d0836941465b6b83",
+  "researchOnly": true,
+  "schemaVersion": 1,
+  "task": "semanticAssociationSupported",
+  "temperature": 0.25,
+  "trainingScriptSHA256": "1b162a25103d208a61f4fe8356fd27a32381354adfec2d695e9484635479202f",
+  "weights": [
+    -3.8591332888336916,
+    2.3060932048226883,
+    -0.6259880913433042,
+    3.0990087175969556,
+    4.565278162565344,
+    -3.4350627257094586
+  ]
+}

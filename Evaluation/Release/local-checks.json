@@ -1,0 +1,45 @@
+{
+  "cpuSeconds": 0.252329,
+  "host": "macOS-26.7-arm64-arm-64bit-Mach-O",
+  "maxChildRSSBytes": 39256064,
+  "outputs": [
+    "Schema migrated/validated.",
+    "{\"files\": 1, \"schemaVersion\": 2}",
+    "{\"deletionsReapplied\": 0, \"moderatorRegrantRequired\": true, \"sessionsRevoked\": true}"
+  ],
+  "physicalDevice": "unavailable",
+  "production": false,
+  "python": "3.14.7",
+  "schemaVersion": 1,
+  "scope": "Local macOS synthetic empty-store CLI drill; not physical or production performance",
+  "simulatorBuild": "passedUnsigned",
+  "suites": {
+    "fusion": {
+      "count": 3,
+      "status": "passed",
+      "wallSeconds": 0.493
+    },
+    "modelTools": {
+      "count": 4,
+      "status": "passed",
+      "wallSeconds": 0.134
+    },
+    "service": {
+      "count": 60,
+      "status": "passed",
+      "wallSeconds": 1.976
+    },
+    "study": {
+      "count": 3,
+      "status": "passed",
+      "wallSeconds": 0.0
+    },
+    "swift": {
+      "count": 88,
+      "status": "passed",
+      "wallSeconds": 0.433
+    }
+  },
+  "thermalMeasurement": "notAvailable",
+  "wallSeconds": 0.3417244580341503
+}

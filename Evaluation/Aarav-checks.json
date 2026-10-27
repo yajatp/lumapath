@@ -1,0 +1,119 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-22",
+  "sourceBaseCommit": "eb2536bc2b348290f162ee6d33489cc08e8d666c",
+  "remoteAudit": {
+    "originMainCurrent": true,
+    "aaravLatestIntegrated": "8c676853c8c8d4176cf603a534a54ebc566a3fec",
+    "b1BranchMerged": true,
+    "openPullRequests": 0,
+    "repositoryForks": 0,
+    "unpublishedWork": "notVisible"
+  },
+  "packageTests": 172,
+  "baselineFullScheme": {
+    "devicesAndConfigurations": [
+      {
+        "device": {
+          "architecture": "arm64",
+          "deviceId": "805CB9F9-E484-4D6A-938F-2418C3131D21",
+          "deviceName": "iPhone 17 Pro",
+          "modelName": "iPhone 17 Pro",
+          "osBuildNumber": "23D8133",
+          "osVersion": "26.3.1",
+          "platform": "iOS Simulator"
+        },
+        "expectedFailures": 0,
+        "failedTests": 0,
+        "passedTests": 40,
+        "skippedTests": 0,
+        "testPlanConfiguration": {
+          "configurationId": "1",
+          "configurationName": "Test Scheme Action"
+        }
+      }
+    ],
+    "environmentDescription": "LumaPath \u00b7 Built with macOS 26.7",
+    "expectedFailures": 0,
+    "failedTests": 0,
+    "finishTime": 1792730566.6,
+    "passedTests": 40,
+    "result": "Passed",
+    "skippedTests": 0,
+    "startTime": 1792730003.448,
+    "statistics": [],
+    "testFailures": [],
+    "title": "Test - LumaPath",
+    "topInsights": [
+      {
+        "category": "Longest Test Runs",
+        "impact": "22% of duration",
+        "text": "1 longest test run with outlier durations exceeding 116.36s (three standard deviations)"
+      },
+      {
+        "category": "Longest Test Runs",
+        "impact": "47% of duration",
+        "text": "1 longest test run with outlier durations exceeding 1.03s (three standard deviations)"
+      }
+    ],
+    "totalTestCount": 40
+  },
+  "regressionReproduction": {
+    "oldBehaviorResult": "FailedAsExpected",
+    "failedAssertions": 2,
+    "reason": "cancelled is not equal to completed",
+    "temporaryOldBehaviorRestoredToFixedSource": true
+  },
+  "finalSourceSHA256": {
+    "LumaPath/App/FindModel.swift": "ff5df41beb810b9880e9e8e8d727986ba2a65d109373502e4b00bf2e8f72e4aa",
+    "LumaPathNativeTests/FindModelTests.swift": "ef7df3ca4ce1c4447a3671497e62b597a61ac8810d2703b4a867c206e73b285b"
+  },
+  "finalNativeAndFindUI": {
+    "devicesAndConfigurations": [
+      {
+        "device": {
+          "architecture": "arm64",
+          "deviceId": "805CB9F9-E484-4D6A-938F-2418C3131D21",
+          "deviceName": "iPhone 17 Pro",
+          "modelName": "iPhone 17 Pro",
+          "osBuildNumber": "23D8133",
+          "osVersion": "26.3.1",
+          "platform": "iOS Simulator"
+        },
+        "expectedFailures": 0,
+        "failedTests": 0,
+        "passedTests": 25,
+        "skippedTests": 0,
+        "testPlanConfiguration": {
+          "configurationId": "1",
+          "configurationName": "Test Scheme Action"
+        }
+      }
+    ],
+    "environmentDescription": "LumaPath \u00b7 Built with macOS 26.7",
+    "expectedFailures": 0,
+    "failedTests": 0,
+    "finishTime": 1792730706.44,
+    "passedTests": 25,
+    "result": "Passed",
+    "skippedTests": 0,
+    "startTime": 1792730647.25,
+    "statistics": [],
+    "testFailures": [],
+    "title": "Test - LumaPath",
+    "topInsights": [
+      {
+        "category": "Longest Test Runs",
+        "impact": "56% of duration",
+        "text": "1 longest test run with outlier durations exceeding 1.59s (three standard deviations)"
+      }
+    ],
+    "totalTestCount": 25
+  },
+  "releaseAuditTests": 7,
+  "softwareReleaseAudit": "passed",
+  "hostedCI": "intentionallySkippedForCommitToPreserveAllowance",
+  "acceptance": "B1-B6DeliveredSoftwareAcceptanceOpen;B7Partial;B8-B14Unfinished",
+  "physicalValidation": "notPerformed",
+  "humanSignoff": "notSupplied"
+}

@@ -1,0 +1,259 @@
+[
+  {
+    "envelope": {
+      "schemaVersion": 2,
+      "frameID": {
+        "sessionID": "00000000-0000-0000-0000-000000000010",
+        "generation": 1,
+        "sequence": 1
+      },
+      "sourceMode": "demoReplay",
+      "captureTimeMonotonic": 0,
+      "createdTimeMonotonic": 0,
+      "expiresAtMonotonic": 0.3
+    },
+    "imageSize": {
+      "width": 640,
+      "height": 480
+    },
+    "depthSize": {
+      "width": 160,
+      "height": 120
+    },
+    "confidenceSize": {
+      "width": 160,
+      "height": 120
+    },
+    "intrinsics": {
+      "fx": 500,
+      "fy": 500,
+      "cx": 320,
+      "cy": 240
+    },
+    "cameraToWorld": [
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    "orientation": "landscapeRight",
+    "viewportSize": {
+      "width": 640,
+      "height": 480
+    },
+    "imageToDisplay": {
+      "a": 1,
+      "b": 0,
+      "c": 0,
+      "d": 1,
+      "tx": 0,
+      "ty": 0
+    },
+    "depthKind": "sceneDepth",
+    "tracking": "normal"
+  },
+  {
+    "envelope": {
+      "schemaVersion": 2,
+      "frameID": {
+        "sessionID": "00000000-0000-0000-0000-000000000010",
+        "generation": 1,
+        "sequence": 2
+      },
+      "sourceMode": "demoReplay",
+      "captureTimeMonotonic": 0,
+      "createdTimeMonotonic": 0,
+      "expiresAtMonotonic": 0.3
+    },
+    "imageSize": {
+      "width": 640,
+      "height": 480
+    },
+    "depthSize": {
+      "width": 160,
+      "height": 120
+    },
+    "confidenceSize": {
+      "width": 160,
+      "height": 120
+    },
+    "intrinsics": {
+      "fx": 500,
+      "fy": 500,
+      "cx": 320,
+      "cy": 240
+    },
+    "cameraToWorld": [
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    "orientation": "portrait",
+    "viewportSize": {
+      "width": 480,
+      "height": 640
+    },
+    "imageToDisplay": {
+      "a": 0,
+      "b": 1,
+      "c": -1,
+      "d": 0,
+      "tx": 1,
+      "ty": 0
+    },
+    "depthKind": "sceneDepth",
+    "tracking": "normal"
+  },
+  {
+    "envelope": {
+      "schemaVersion": 2,
+      "frameID": {
+        "sessionID": "00000000-0000-0000-0000-000000000010",
+        "generation": 1,
+        "sequence": 3
+      },
+      "sourceMode": "demoReplay",
+      "captureTimeMonotonic": 0,
+      "createdTimeMonotonic": 0,
+      "expiresAtMonotonic": 0.3
+    },
+    "imageSize": {
+      "width": 640,
+      "height": 480
+    },
+    "depthSize": {
+      "width": 160,
+      "height": 120
+    },
+    "confidenceSize": {
+      "width": 160,
+      "height": 120
+    },
+    "intrinsics": {
+      "fx": 500,
+      "fy": 500,
+      "cx": 320,
+      "cy": 240
+    },
+    "cameraToWorld": [
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    "orientation": "landscapeLeft",
+    "viewportSize": {
+      "width": 640,
+      "height": 480
+    },
+    "imageToDisplay": {
+      "a": -1,
+      "b": 0,
+      "c": 0,
+      "d": -1,
+      "tx": 1,
+      "ty": 1
+    },
+    "depthKind": "sceneDepth",
+    "tracking": "normal"
+  },
+  {
+    "envelope": {
+      "schemaVersion": 2,
+      "frameID": {
+        "sessionID": "00000000-0000-0000-0000-000000000010",
+        "generation": 1,
+        "sequence": 4
+      },
+      "sourceMode": "demoReplay",
+      "captureTimeMonotonic": 0,
+      "createdTimeMonotonic": 0,
+      "expiresAtMonotonic": 0.3
+    },
+    "imageSize": {
+      "width": 640,
+      "height": 480
+    },
+    "depthSize": {
+      "width": 160,
+      "height": 120
+    },
+    "confidenceSize": null,
+    "intrinsics": {
+      "fx": 500,
+      "fy": 500,
+      "cx": 320,
+      "cy": 240
+    },
+    "cameraToWorld": [
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    "orientation": "portraitUpsideDown",
+    "viewportSize": {
+      "width": 480,
+      "height": 640
+    },
+    "imageToDisplay": {
+      "a": 0,
+      "b": -1,
+      "c": 1,
+      "d": 0,
+      "tx": 0,
+      "ty": 1
+    },
+    "depthKind": "sceneDepth",
+    "tracking": "normal"
+  }
+]

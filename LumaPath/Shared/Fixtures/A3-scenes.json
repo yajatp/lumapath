@@ -1,0 +1,29 @@
+[
+  {
+    "name": "Obstacle ahead", "floor": false, "confidencePresent": true, "expectedCorridor": "ahead",
+    "patches": [{"x": 28, "y": 16, "width": 8, "height": 12, "depth": 2, "confidence": 2}]
+  },
+  {
+    "name": "Same obstacle to right", "floor": false, "confidencePresent": true, "expectedCorridor": "right",
+    "patches": [{"x": 52, "y": 16, "width": 8, "height": 12, "depth": 2, "confidence": 2}]
+  },
+  {
+    "name": "Close obstacle ahead", "floor": false, "confidencePresent": true, "expectedCorridor": "ahead",
+    "patches": [{"x": 28, "y": 16, "width": 8, "height": 12, "depth": 0.6, "confidence": 2}]
+  },
+  {
+    "name": "Missing depth is unknown", "floor": false, "confidencePresent": true, "patches": []
+  },
+  {
+    "name": "Confidence unavailable", "floor": false, "confidencePresent": false, "expectedCorridor": "ahead",
+    "patches": [{"x": 28, "y": 16, "width": 8, "height": 12, "depth": 2, "confidence": 2}]
+  },
+  {
+    "name": "Calibrated floor and obstacle", "floor": true, "confidencePresent": true, "expectedCorridor": "ahead",
+    "patches": [{"x": 28, "y": 16, "width": 8, "height": 12, "depth": 2, "confidence": 2}]
+  },
+  {
+    "name": "Low-confidence depth", "floor": false, "confidencePresent": true,
+    "patches": [{"x": 28, "y": 16, "width": 8, "height": 12, "depth": 2, "confidence": 0}]
+  }
+]

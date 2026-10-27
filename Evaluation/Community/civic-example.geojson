@@ -1,0 +1,29 @@
+{
+  "type": "FeatureCollection",
+  "schemaVersion": 1,
+  "evidenceVersion": 4,
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.621,
+          41.881
+        ]
+      },
+      "properties": {
+        "issueID": "66412b3741a7750272aa7b638556a27d",
+        "category": "sidewalkObstruction",
+        "segmentID": "pilot-1",
+        "side": "north",
+        "level": "ground",
+        "firstObservedAt": 1792583990.0,
+        "lastObservedAt": 1792583990.0,
+        "independentConfirmationCount": 0,
+        "status": "verified",
+        "applicableNow": true
+      }
+    }
+  ]
+}

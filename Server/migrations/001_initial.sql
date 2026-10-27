@@ -1,0 +1,13 @@
+CREATE TABLE users(id TEXT PRIMARY KEY, issuer TEXT NOT NULL, subject TEXT NOT NULL, role TEXT NOT NULL DEFAULT 'user' CHECK(role IN ('user','moderator')), UNIQUE(issuer,subject));
+CREATE TABLE sessions(token_hash TEXT PRIMARY KEY, user_id TEXT NOT NULL REFERENCES users(id), expires_at REAL NOT NULL);
+CREATE TABLE challenges(nonce_hash TEXT PRIMARY KEY, expires_at REAL NOT NULL);
+CREATE TABLE reports(id TEXT PRIMARY KEY, author_id TEXT NOT NULL REFERENCES users(id), body TEXT NOT NULL, status TEXT NOT NULL, revision INTEGER NOT NULL, created_at REAL NOT NULL, updated_at REAL NOT NULL, evidence_key TEXT, evidence_type TEXT, deleted INTEGER NOT NULL DEFAULT 0);
+CREATE TABLE idempotency(user_id TEXT NOT NULL REFERENCES users(id), key TEXT NOT NULL, digest TEXT NOT NULL, report_id TEXT NOT NULL REFERENCES reports(id), PRIMARY KEY(user_id,key));
+CREATE TABLE audit(id INTEGER PRIMARY KEY AUTOINCREMENT, report_id TEXT, actor_id TEXT NOT NULL, action TEXT NOT NULL, reason TEXT NOT NULL, evidence_reference TEXT, at REAL NOT NULL);
+CREATE TABLE deletion_jobs(id TEXT PRIMARY KEY, report_id TEXT NOT NULL UNIQUE REFERENCES reports(id), object_key TEXT, attempts INTEGER NOT NULL DEFAULT 0, completed INTEGER NOT NULL DEFAULT 0);
+CREATE TABLE rate_limits(bucket TEXT PRIMARY KEY, reset_at REAL NOT NULL, count INTEGER NOT NULL);
+CREATE TABLE metadata(key TEXT PRIMARY KEY, value INTEGER NOT NULL);
+INSERT INTO metadata VALUES('public_version',1);
+CREATE INDEX reports_status ON reports(status,deleted);
+CREATE INDEX sessions_expiry ON sessions(expires_at);
+PRAGMA user_version=1;

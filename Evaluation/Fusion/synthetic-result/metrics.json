@@ -1,0 +1,748 @@
+{
+  "baseline": {
+    "abstentions": 0,
+    "brier": 0.24333333333333337,
+    "calibration": [
+      {
+        "bin": 0,
+        "count": 0,
+        "meanProbability": null,
+        "positiveRate": null
+      },
+      {
+        "bin": 1,
+        "count": 93,
+        "meanProbability": 0.1,
+        "positiveRate": 0.3010752688172043
+      },
+      {
+        "bin": 2,
+        "count": 0,
+        "meanProbability": null,
+        "positiveRate": null
+      },
+      {
+        "bin": 3,
+        "count": 0,
+        "meanProbability": null,
+        "positiveRate": null
+      },
+      {
+        "bin": 4,
+        "count": 0,
+        "meanProbability": null,
+        "positiveRate": null
+      },
+      {
+        "bin": 5,
+        "count": 0,
+        "meanProbability": null,
+        "positiveRate": null
+      },
+      {
+        "bin": 6,
+        "count": 0,
+        "meanProbability": null,
+        "positiveRate": null
+      },
+      {
+        "bin": 7,
+        "count": 0,
+        "meanProbability": null,
+        "positiveRate": null
+      },
+      {
+        "bin": 8,
+        "count": 0,
+        "meanProbability": null,
+        "positiveRate": null
+      },
+      {
+        "bin": 9,
+        "count": 3,
+        "meanProbability": 0.9,
+        "positiveRate": 1.0
+      }
+    ],
+    "count": 96,
+    "falseNegatives": 28,
+    "falsePositives": 0,
+    "negatives": 65,
+    "positives": 31
+  },
+  "conditions": {
+    "lighting:bright": {
+      "baseline": {
+        "abstentions": 0,
+        "brier": 0.22666666666666668,
+        "calibration": [
+          {
+            "bin": 0,
+            "count": 0,
+            "meanProbability": null,
+            "positiveRate": null
+          },
+          {
+            "bin": 1,
+            "count": 45,
+            "meanProbability": 0.1,
+            "positiveRate": 0.28888888888888886
+          },
+          {
+            "bin": 2,
+            "count": 0,
+            "meanProbability": null,
+            "positiveRate": null
+          },
+          {
+            "bin": 3,
+            "count": 0,
+            "meanProbability": null,
+            "positiveRate": null
+          },
+          {
+            "bin": 4,
+            "count": 0,
+            "meanProbability": null,
+            "positiveRate": null
+          },
+          {
+            "bin": 5,
+            "count": 0,
+            "meanProbability": null,
+            "positiveRate": null
+          },
+          {
+            "bin": 6,
+            "count": 0,
+            "meanProbability": null,
+            "positiveRate": null
+          },
+          {
+            "bin": 7,
+            "count": 0,
+            "meanProbability": null,
+            "positiveRate": null
+          },
+          {
+            "bin": 8,
+            "count": 0,
+            "meanProbability": null,
+            "positiveRate": null
+          },
+          {
+            "bin": 9,
+            "count": 3,
+            "meanProbability": 0.9,
+            "positiveRate": 1.0
+          }
+        ],
+        "count": 48,
+        "falseNegatives": 13,
+        "falsePositives": 0,
+        "negatives": 32,
+        "positives": 16
+      },
+      "learned": {
+        "abstentions": 1,
+        "brier": 0.040850354612027656,
+        "calibration": [
+          {
+            "bin": 0,
+            "count": 30,
+            "meanProbability": 0.005400538022681247,
+            "positiveRate": 0.0
+          },
+          {
+            "bin": 1,
+            "count": 0,
+            "meanProbability": null,
+            "positiveRate": null
+          },
+          {
+            "bin": 2,
+            "count": 3,
+            "meanProbability": 0.24997949344494397,
+            "positiveRate": 0.6666666666666666
+          },
+          {
+            "bin": 3,
+            "count": 0,
+            "meanProbability": null,
+            "positiveRate": null
+          },
+          {
+            "bin": 4,
+            "count": 0,
+            "meanProbability": null,
+            "positiveRate": null
+          },
+          {
+            "bin": 5,
+            "count": 1,
+            "meanProbability": 0.5858430945782526,
+            "positiveRate": 1.0
+          },
+          {
+            "bin": 6,
+            "count": 0,
+            "meanProbability": null,
+            "positiveRate": null
+          },
+          {
+            "bin": 7,
+            "count": 1,
+            "meanProbability": 0.7011518034787345,
+            "positiveRate": 0.0
+          },
+          {
+            "bin": 8,
+            "count": 2,
+            "meanProbability": 0.8263417862134643,
+            "positiveRate": 1.0
+          },
+          {
+            "bin": 9,
+            "count": 11,
+            "meanProbability": 0.9956664698882167,
+            "positiveRate": 1.0
+          }
+        ],
+        "count": 48,
+        "falseNegatives": 2,
+        "falsePositives": 1,
+        "negatives": 32,
+        "positives": 16
+      }
+    },
+    "lighting:dark": {
+      "baseline": {
+        "abstentions": 0,
+        "brier": 0.26,
+        "calibration": [
+          {
+            "bin": 0,
+            "count": 0,
+            "meanProbability": null,
+            "positiveRate": null
+          },
+          {
+            "bin": 1,
+            "count": 48,
+            "meanProbability": 0.10000000000000002,
+            "positiveRate": 0.3125
+          },
+          {
+            "bin": 2,
+            "count": 0,
+            "meanProbability": null,
+            "positiveRate": null
+          },
+          {
+            "bin": 3,
+            "count": 0,
+            "meanProbability": null,
+            "positiveRate": null
+          },
+          {
+            "bin": 4,
+            "count": 0,
+            "meanProbability": null,
+            "positiveRate": null
+          },
+          {
+            "bin": 5,
+            "count": 0,
+            "meanProbability": null,
+            "positiveRate": null
+          },
+          {
+            "bin": 6,
+            "count": 0,
+            "meanProbability": null,
+            "positiveRate": null
+          },
+          {
+            "bin": 7,
+            "count": 0,
+            "meanProbability": null,
+            "positiveRate": null
+          },
+          {
+            "bin": 8,
+            "count": 0,
+            "meanProbability": null,
+            "positiveRate": null
+          },
+          {
+            "bin": 9,
+            "count": 0,
+            "meanProbability": null,
+            "positiveRate": null
+          }
+        ],
+        "count": 48,
+        "falseNegatives": 15,
+        "falsePositives": 0,
+        "negatives": 33,
+        "positives": 15
+      },
+      "learned": {
+        "abstentions": 4,
+        "brier": 0.062300757409139894,
+        "calibration": [
+          {
+            "bin": 0,
+            "count": 26,
+            "meanProbability": 0.004459804994689003,
+            "positiveRate": 0.0
+          },
+          {
+            "bin": 1,
+            "count": 3,
+            "meanProbability": 0.14002900319525727,
+            "positiveRate": 0.3333333333333333
+          },
+          {
+            "bin": 2,
+            "count": 3,
+            "meanProbability": 0.27833943463555927,
+            "positiveRate": 0.3333333333333333
+          },
+          {
+            "bin": 3,
+            "count": 1,
+            "meanProbability": 0.36516047872323554,
+            "positiveRate": 1.0
+          },
+          {
+            "bin": 4,
+            "count": 3,
+            "meanProbability": 0.4541121971340605,
+            "positiveRate": 0.3333333333333333
+          },
+          {
+            "bin": 5,
+            "count": 1,
+            "meanProbability": 0.5311066834347224,
+            "positiveRate": 0.0
+          },
+          {
+            "bin": 6,
+            "count": 0,
+            "meanProbability": null,
+            "positiveRate": null
+          },
+          {
+            "bin": 7,
+            "count": 0,
+            "meanProbability": null,
+            "positiveRate": null
+          },
+          {
+            "bin": 8,
+            "count": 3,
+            "meanProbability": 0.8398727428998541,
+            "positiveRate": 1.0
+          },
+          {
+            "bin": 9,
+            "count": 8,
+            "meanProbability": 0.9878667540124785,
+            "positiveRate": 1.0
+          }
+        ],
+        "count": 48,
+        "falseNegatives": 4,
+        "falsePositives": 1,
+        "negatives": 33,
+        "positives": 15
+      }
+    },
+    "surface:matte": {
+      "baseline": {
+        "abstentions": 0,
+        "brier": 0.22666666666666668,
+        "calibration": [
+          {
+            "bin": 0,
+            "count": 0,
+            "meanProbability": null,
+            "positiveRate": null
+          },
+          {
+            "bin": 1,
+            "count": 45,
+            "meanProbability": 0.1,
+            "positiveRate": 0.28888888888888886
+          },
+          {
+            "bin": 2,
+            "count": 0,
+            "meanProbability": null,
+            "positiveRate": null
+          },
+          {
+            "bin": 3,
+            "count": 0,
+            "meanProbability": null,
+            "positiveRate": null
+          },
+          {
+            "bin": 4,
+            "count": 0,
+            "meanProbability": null,
+            "positiveRate": null
+          },
+          {
+            "bin": 5,
+            "count": 0,
+            "meanProbability": null,
+            "positiveRate": null
+          },
+          {
+            "bin": 6,
+            "count": 0,
+            "meanProbability": null,
+            "positiveRate": null
+          },
+          {
+            "bin": 7,
+            "count": 0,
+            "meanProbability": null,
+            "positiveRate": null
+          },
+          {
+            "bin": 8,
+            "count": 0,
+            "meanProbability": null,
+            "positiveRate": null
+          },
+          {
+            "bin": 9,
+            "count": 3,
+            "meanProbability": 0.9,
+            "positiveRate": 1.0
+          }
+        ],
+        "count": 48,
+        "falseNegatives": 13,
+        "falsePositives": 0,
+        "negatives": 32,
+        "positives": 16
+      },
+      "learned": {
+        "abstentions": 1,
+        "brier": 0.040850354612027656,
+        "calibration": [
+          {
+            "bin": 0,
+            "count": 30,
+            "meanProbability": 0.005400538022681247,
+            "positiveRate": 0.0
+          },
+          {
+            "bin": 1,
+            "count": 0,
+            "meanProbability": null,
+            "positiveRate": null
+          },
+          {
+            "bin": 2,
+            "count": 3,
+            "meanProbability": 0.24997949344494397,
+            "positiveRate": 0.6666666666666666
+          },
+          {
+            "bin": 3,
+            "count": 0,
+            "meanProbability": null,
+            "positiveRate": null
+          },
+          {
+            "bin": 4,
+            "count": 0,
+            "meanProbability": null,
+            "positiveRate": null
+          },
+          {
+            "bin": 5,
+            "count": 1,
+            "meanProbability": 0.5858430945782526,
+            "positiveRate": 1.0
+          },
+          {
+            "bin": 6,
+            "count": 0,
+            "meanProbability": null,
+            "positiveRate": null
+          },
+          {
+            "bin": 7,
+            "count": 1,
+            "meanProbability": 0.7011518034787345,
+            "positiveRate": 0.0
+          },
+          {
+            "bin": 8,
+            "count": 2,
+            "meanProbability": 0.8263417862134643,
+            "positiveRate": 1.0
+          },
+          {
+            "bin": 9,
+            "count": 11,
+            "meanProbability": 0.9956664698882167,
+            "positiveRate": 1.0
+          }
+        ],
+        "count": 48,
+        "falseNegatives": 2,
+        "falsePositives": 1,
+        "negatives": 32,
+        "positives": 16
+      }
+    },
+    "surface:reflective": {
+      "baseline": {
+        "abstentions": 0,
+        "brier": 0.26,
+        "calibration": [
+          {
+            "bin": 0,
+            "count": 0,
+            "meanProbability": null,
+            "positiveRate": null
+          },
+          {
+            "bin": 1,
+            "count": 48,
+            "meanProbability": 0.10000000000000002,
+            "positiveRate": 0.3125
+          },
+          {
+            "bin": 2,
+            "count": 0,
+            "meanProbability": null,
+            "positiveRate": null
+          },
+          {
+            "bin": 3,
+            "count": 0,
+            "meanProbability": null,
+            "positiveRate": null
+          },
+          {
+            "bin": 4,
+            "count": 0,
+            "meanProbability": null,
+            "positiveRate": null
+          },
+          {
+            "bin": 5,
+            "count": 0,
+            "meanProbability": null,
+            "positiveRate": null
+          },
+          {
+            "bin": 6,
+            "count": 0,
+            "meanProbability": null,
+            "positiveRate": null
+          },
+          {
+            "bin": 7,
+            "count": 0,
+            "meanProbability": null,
+            "positiveRate": null
+          },
+          {
+            "bin": 8,
+            "count": 0,
+            "meanProbability": null,
+            "positiveRate": null
+          },
+          {
+            "bin": 9,
+            "count": 0,
+            "meanProbability": null,
+            "positiveRate": null
+          }
+        ],
+        "count": 48,
+        "falseNegatives": 15,
+        "falsePositives": 0,
+        "negatives": 33,
+        "positives": 15
+      },
+      "learned": {
+        "abstentions": 4,
+        "brier": 0.062300757409139894,
+        "calibration": [
+          {
+            "bin": 0,
+            "count": 26,
+            "meanProbability": 0.004459804994689003,
+            "positiveRate": 0.0
+          },
+          {
+            "bin": 1,
+            "count": 3,
+            "meanProbability": 0.14002900319525727,
+            "positiveRate": 0.3333333333333333
+          },
+          {
+            "bin": 2,
+            "count": 3,
+            "meanProbability": 0.27833943463555927,
+            "positiveRate": 0.3333333333333333
+          },
+          {
+            "bin": 3,
+            "count": 1,
+            "meanProbability": 0.36516047872323554,
+            "positiveRate": 1.0
+          },
+          {
+            "bin": 4,
+            "count": 3,
+            "meanProbability": 0.4541121971340605,
+            "positiveRate": 0.3333333333333333
+          },
+          {
+            "bin": 5,
+            "count": 1,
+            "meanProbability": 0.5311066834347224,
+            "positiveRate": 0.0
+          },
+          {
+            "bin": 6,
+            "count": 0,
+            "meanProbability": null,
+            "positiveRate": null
+          },
+          {
+            "bin": 7,
+            "count": 0,
+            "meanProbability": null,
+            "positiveRate": null
+          },
+          {
+            "bin": 8,
+            "count": 3,
+            "meanProbability": 0.8398727428998541,
+            "positiveRate": 1.0
+          },
+          {
+            "bin": 9,
+            "count": 8,
+            "meanProbability": 0.9878667540124785,
+            "positiveRate": 1.0
+          }
+        ],
+        "count": 48,
+        "falseNegatives": 4,
+        "falsePositives": 1,
+        "negatives": 33,
+        "positives": 15
+      }
+    }
+  },
+  "decision": "pendingRealData",
+  "epochs": 1000,
+  "exclusions": 0,
+  "l2": 0.001,
+  "learned": {
+    "abstentions": 5,
+    "brier": 0.05157555601058377,
+    "calibration": [
+      {
+        "bin": 0,
+        "count": 56,
+        "meanProbability": 0.004963769116827706,
+        "positiveRate": 0.0
+      },
+      {
+        "bin": 1,
+        "count": 3,
+        "meanProbability": 0.14002900319525727,
+        "positiveRate": 0.3333333333333333
+      },
+      {
+        "bin": 2,
+        "count": 6,
+        "meanProbability": 0.26415946404025165,
+        "positiveRate": 0.5
+      },
+      {
+        "bin": 3,
+        "count": 1,
+        "meanProbability": 0.36516047872323554,
+        "positiveRate": 1.0
+      },
+      {
+        "bin": 4,
+        "count": 3,
+        "meanProbability": 0.4541121971340605,
+        "positiveRate": 0.3333333333333333
+      },
+      {
+        "bin": 5,
+        "count": 2,
+        "meanProbability": 0.5584748890064875,
+        "positiveRate": 0.5
+      },
+      {
+        "bin": 6,
+        "count": 0,
+        "meanProbability": null,
+        "positiveRate": null
+      },
+      {
+        "bin": 7,
+        "count": 1,
+        "meanProbability": 0.7011518034787345,
+        "positiveRate": 0.0
+      },
+      {
+        "bin": 8,
+        "count": 5,
+        "meanProbability": 0.8344603602252981,
+        "positiveRate": 1.0
+      },
+      {
+        "bin": 9,
+        "count": 19,
+        "meanProbability": 0.992382378993169,
+        "positiveRate": 1.0
+      }
+    ],
+    "count": 96,
+    "falseNegatives": 6,
+    "falsePositives": 2,
+    "negatives": 65,
+    "positives": 31
+  },
+  "learningRate": 0.2,
+  "liveActivation": false,
+  "manifestSHA256": "77115af503292409a5dcc07b795fbf24520c49ac7b6c2687d0836941465b6b83",
+  "modelSHA256": "0845d40fed71664589ba05ac64200b9f4be68aa6bc0d43d51cf85a7fffe668a0",
+  "schemaVersion": 1,
+  "seed": 17,
+  "splits": {
+    "test": 96,
+    "train": 96,
+    "validation": 96
+  },
+  "synthetic": true,
+  "temperatureCandidates": [
+    0.25,
+    0.5,
+    0.75,
+    1.0,
+    1.5,
+    2.0,
+    3.0,
+    4.0
+  ]
+}

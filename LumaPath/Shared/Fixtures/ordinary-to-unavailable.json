@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 2,
+  "sourceMode": "demoReplay",
+  "imageFilename": "synthetic-scene.png",
+  "steps": [
+    {
+      "name": "Ordinary obstacle",
+      "lifecycle": "running",
+      "quality": "active",
+      "reasons": [
+        "syntheticFixture"
+      ],
+      "includeObstacle": true
+    },
+    {
+      "name": "Limited coverage",
+      "lifecycle": "running",
+      "quality": "limited",
+      "reasons": [
+        "syntheticSparseDepth"
+      ],
+      "includeObstacle": true
+    },
+    {
+      "name": "Paused",
+      "lifecycle": "paused",
+      "quality": "initializing",
+      "reasons": [],
+      "includeObstacle": false
+    },
+    {
+      "name": "Unavailable input",
+      "lifecycle": "running",
+      "quality": "unavailable",
+      "reasons": [
+        "syntheticMissingFrames"
+      ],
+      "includeObstacle": false
+    }
+  ]
+}

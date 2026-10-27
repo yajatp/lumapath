@@ -1,0 +1,94 @@
+{
+  "compiledAppMetadataAudit": "passed; not an installation trial",
+  "date": "2026-10-22",
+  "environment": {
+    "runtime": "iOS 26.3",
+    "simulator": "iPhone 17 Pro",
+    "swift": "6.2.3",
+    "watchSimulator": "watchOS 26.2",
+    "xcode": "26.2 (17C52)"
+  },
+  "finalTestSourceCommit": "3ae9155901cc77d99a50115cbabef9004751462b",
+  "fullRunSourceCommit": "42f0d355f833e651353e5dcbff58f753e64e6473",
+  "hosted": {
+    "communityService": "success",
+    "finalTestAmendmentsCertified": false,
+    "foundation": "success",
+    "sourceCommit": "42f0d355f833e651353e5dcbff58f753e64e6473",
+    "url": "https://github.com/yajatp/lumapath/actions/runs/39878254353"
+  },
+  "nativeSimulator": {
+    "count": 14,
+    "status": "passed"
+  },
+  "physicalDeviceResults": [],
+  "productionDeployment": false,
+  "productionSourceUnchangedFromFullRun": true,
+  "python": {
+    "fusion": {
+      "count": 3,
+      "status": "passed"
+    },
+    "model": {
+      "count": 4,
+      "status": "passed"
+    },
+    "release": {
+      "count": 7,
+      "status": "passed"
+    },
+    "service": {
+      "count": 60,
+      "status": "passed"
+    },
+    "study": {
+      "count": 3,
+      "status": "passed"
+    }
+  },
+  "releaseAcceptance": "pendingExternalEvidenceAndPairReview",
+  "remaining": [
+    "A6 accepted trained assets and held-out/device evaluation",
+    "B6, spatial B7 and B8\u2013B14 product workflows",
+    "C2 fallback workflows and C3 AR tuning/physical measurements",
+    "Surveyed pilot and identity/provider/staging deployment",
+    "Real consented fusion/comparative studies",
+    "Physical sensing/output/accessibility/watch/OS-floor trials and pair review"
+  ],
+  "schemaVersion": 1,
+  "sourceSHA256": {
+    ".github/workflows/build.yml": "f2092fc9e1fd8f3d9b48134ca7ca59171f4a5e3359130455244541cebc8406a6",
+    "LumaPath/Feedback/IndependentOutputSink.swift": "c99c413f7a6a5f3849daaeb7371efdd0ba30ed05e9431e0cbed141fa653471c6",
+    "LumaPathFeedbackTests/FeedbackTests.swift": "df493dbee618e1e6920e80872fba5ae7ec37dad03d97497ca32a72f8c5f5cf5e",
+    "LumaPathUITests/EnhancementTests.swift": "5aae480ad4bd6ae4ea5e2e9dc7bc8a1e84318b5dddefe438d49bedb80dac03c1",
+    "LumaPathUITests/ProfileJourneyTests.swift": "4b57ea267bf6f9f256045acf2c0758297e6d8825dd66a7f396fff9561c9dce4d"
+  },
+  "swiftPackage": {
+    "count": 157,
+    "status": "passed"
+  },
+  "timezone": "America/Chicago",
+  "uiSimulator": {
+    "distinctCasesVerified": 15,
+    "focusedEnhancementRecheck": {
+      "count": 2,
+      "status": "passed"
+    },
+    "focusedSavedNoteRepair": {
+      "count": 1,
+      "popoverDismissalExercised": true,
+      "status": "passed"
+    },
+    "fullSchemeAfterTestRepairs": "notRerun; no production code changed",
+    "initialFullRun": {
+      "failed": 1,
+      "failure": "Saved-place test assumed Keep note exists in an adaptive confirmation popover",
+      "passed": 14,
+      "total": 15
+    }
+  },
+  "unsignedBuilds": {
+    "iPhoneOS": "passed",
+    "watchSimulator": "passed"
+  }
+}

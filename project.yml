@@ -1,0 +1,136 @@
+name: LumaPath
+options:
+  minimumXcodeGenVersion: 2.46.0
+  deploymentTarget:
+    iOS: '17.0'
+    watchOS: '10.0'
+packages:
+  LumaPath:
+    path: .
+settings:
+  base:
+    SWIFT_VERSION: '6.0'
+    TARGETED_DEVICE_FAMILY: '1'
+    CODE_SIGN_STYLE: Automatic
+    DEVELOPMENT_TEAM: FJX87TYG6M
+targets:
+  LumaPath:
+    type: application
+    platform: iOS
+    sources: [LumaPath/App]
+    dependencies:
+      - package: LumaPath
+        product: LumaPathCommands
+      - package: LumaPath
+        product: LumaPathAttention
+      - target: LumaPathWatch
+        embed: true
+      - package: LumaPath
+        product: LumaPathAccessories
+      - package: LumaPath
+        product: LumaPathFeedback
+      - package: LumaPath
+        product: LumaPathPersonalization
+      - package: LumaPath
+        product: LumaPathRendering
+      - package: LumaPath
+        product: LumaPathDomain
+      - package: LumaPath
+        product: LumaPathSensors
+      - package: LumaPath
+        product: LumaPathPerception
+      - package: LumaPath
+        product: LumaPathRisk
+      - package: LumaPath
+        product: LumaPathModels
+      - package: LumaPath
+        product: LumaPathGoals
+      - package: LumaPath
+        product: LumaPathMemory
+      - package: LumaPath
+        product: LumaPathRouting
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: org.lumapath.LumaPath
+        TARGETED_DEVICE_FAMILY: '1'
+        GENERATE_INFOPLIST_FILE: YES
+        INFOPLIST_KEY_CFBundleDisplayName: LumaPath
+        INFOPLIST_KEY_NSCameraUsageDescription: LumaPath uses the camera for the live view and supported depth measurements. Images stay on this device.
+        INFOPLIST_KEY_NSMicrophoneUsageDescription: LumaPath uses the microphone only when you tap Speak to enter a command on this device.
+        INFOPLIST_KEY_NSSpeechRecognitionUsageDescription: LumaPath recognizes an English command on this device when supported. Typed input remains available.
+        INFOPLIST_KEY_UILaunchScreen_Generation: YES
+        INFOPLIST_KEY_UISupportedInterfaceOrientations: UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight
+  LumaPathWatch:
+    type: application
+    platform: watchOS
+    sources: [LumaPath/WatchApp]
+    dependencies:
+      - package: LumaPath
+        product: LumaPathAccessories
+      - package: LumaPath
+        product: LumaPathDomain
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: org.lumapath.LumaPath.watch
+        TARGETED_DEVICE_FAMILY: '4'
+        GENERATE_INFOPLIST_FILE: YES
+        INFOPLIST_KEY_CFBundleDisplayName: LumaPath
+        INFOPLIST_KEY_WKApplication: YES
+        INFOPLIST_KEY_WKCompanionAppBundleIdentifier: org.lumapath.LumaPath
+        INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp: NO
+        SKIP_INSTALL: YES
+  LumaPathNativeTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources: [LumaPathNativeTests]
+    dependencies:
+      - target: LumaPath
+      - package: LumaPath
+        product: LumaPathAccessories
+      - package: LumaPath
+        product: LumaPathFeedback
+      - package: LumaPath
+        product: LumaPathPersonalization
+      - package: LumaPath
+        product: LumaPathRendering
+      - package: LumaPath
+        product: LumaPathDomain
+      - package: LumaPath
+        product: LumaPathSensors
+      - package: LumaPath
+        product: LumaPathPerception
+      - package: LumaPath
+        product: LumaPathRisk
+      - package: LumaPath
+        product: LumaPathModels
+      - package: LumaPath
+        product: LumaPathGoals
+      - package: LumaPath
+        product: LumaPathMemory
+      - package: LumaPath
+        product: LumaPathRouting
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: org.lumapath.LumaPathNativeTests
+        GENERATE_INFOPLIST_FILE: YES
+  LumaPathUITests:
+    type: bundle.ui-testing
+    platform: iOS
+    sources: [LumaPathUITests]
+    dependencies:
+      - target: LumaPath
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: org.lumapath.LumaPathUITests
+        GENERATE_INFOPLIST_FILE: YES
+schemes:
+  LumaPathWatch:
+    build:
+      targets:
+        LumaPathWatch: all
+  LumaPath:
+    build:
+      targets:
+        LumaPath: all
+    test:
+      targets: [LumaPathNativeTests, LumaPathUITests]

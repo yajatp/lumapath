@@ -1,0 +1,134 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-21",
+  "previousStageCommits": {
+    "A8": "623c04e",
+    "A9": "89a6ffd"
+  },
+  "scope": "A8\u2013A10 local producers; synthetic data and generated signing-key fixtures only",
+  "results": {
+    "swiftPackageTests": 88,
+    "serviceTests": 48,
+    "unsignedIOSSimulatorBuild": "passed",
+    "externalStagingTest": null,
+    "surveyedPilotTest": null
+  },
+  "sources": [
+    {
+      "path": "Evaluation/Community/civic-example.csv",
+      "sha256": "30514735cb005a85944f38f99f3b4cbbbed0a408f0902d643325b6f88d477c61"
+    },
+    {
+      "path": "Evaluation/Community/civic-example.geojson",
+      "sha256": "556eff54f04b6769601e9bad2c14a34e51ac780d67921a7abda282f36d399c9a"
+    },
+    {
+      "path": "Evaluation/Community/civic-example.txt",
+      "sha256": "39caff4975ea4d76599dd17cee112b01c38136c5676f46dee1eb6bd34b975a6d"
+    },
+    {
+      "path": "Evaluation/Community/route-evidence.json",
+      "sha256": "f10912f42b92847f04f4c008b6a5d568e979d19a3e8ce3f8cd519ac2e8dd722a"
+    },
+    {
+      "path": "Evaluation/Routing/worked-example.json",
+      "sha256": "5808937c231cd7351eff08006613efbfbcb1c6ec2053cff71869e82998fc8f22"
+    },
+    {
+      "path": "LumaPath.xcodeproj/project.pbxproj",
+      "sha256": "dc024eb19f0a29a5a66aa5ab367e05230fe26733353b386f1bcee7f0252f8e95"
+    },
+    {
+      "path": "LumaPath/Routing/CommunityEvidenceFeed.swift",
+      "sha256": "7fdf0277d2538a05ab297a5946b045b2ce572f79f0003d13b7cde5391ab96fb2"
+    },
+    {
+      "path": "LumaPath/Routing/OfflineGraphStore.swift",
+      "sha256": "456bc9412ff822d149f312fd0991f9186664d565d94a0277c97f1d3ff3120fa4"
+    },
+    {
+      "path": "LumaPath/Routing/PedestrianGraph.swift",
+      "sha256": "6624019b37173b96a3ac303d0662f52635306c6cd4ba0f7b1110c2b2918366a4"
+    },
+    {
+      "path": "LumaPath/Routing/RoutePlanner.swift",
+      "sha256": "fd40bf79ba854b9ad92154cd57dd2fa61e87ff1baa7bc41c1858f52f94139cd5"
+    },
+    {
+      "path": "LumaPathRoutingTests/Fixtures/community-feed.json",
+      "sha256": "98d9f4c580e29309e14744e575d720bb3051f5544642973be09c6c0b968bd710"
+    },
+    {
+      "path": "LumaPathRoutingTests/RoutingTests.swift",
+      "sha256": "59557024b52f73128465d274446e6b0834172fd4cc5485713738a560e60f6c2e"
+    },
+    {
+      "path": "Package.swift",
+      "sha256": "e0e4d05fe7e4b602f1321544311703c73b727513585ea018d4f7c65b4e941fb5"
+    },
+    {
+      "path": "Server/migrations/001_initial.sql",
+      "sha256": "563cefcb5dc04d892f436624b3c7db5aad2635b51012946a7a755f57d0286d42"
+    },
+    {
+      "path": "Server/migrations/002_intelligence.sql",
+      "sha256": "f74d4dc39e9aa5f237e8a84cf544c48383c236a14e6974d09b5b90e04f1b95cf"
+    },
+    {
+      "path": "Server/lumapath_service/__init__.py",
+      "sha256": "f6724f90a0c01c949a47ca763125ae60cbbbbbbb4362f4ee807cfbf282728225"
+    },
+    {
+      "path": "Server/lumapath_service/__main__.py",
+      "sha256": "354bb1ac85f690ac5d080b719b429cedbb860c98b7ad8a74496b7a91776d034e"
+    },
+    {
+      "path": "Server/lumapath_service/auth.py",
+      "sha256": "adcbf4a314888460a42b405bbf916681043e0ceb4ca389f383d26e573b8dc5de"
+    },
+    {
+      "path": "Server/lumapath_service/database.py",
+      "sha256": "60c3b89e23f4e7339f9c0dea538ab16b080f5df3b274b6a28084d1e6fc667cf6"
+    },
+    {
+      "path": "Server/lumapath_service/http.py",
+      "sha256": "5492a8d15ea120fb9b07e4dceeb5c22d206063046193af788689956f2d79dca4"
+    },
+    {
+      "path": "Server/lumapath_service/intelligence.py",
+      "sha256": "c9fb17b02c1c7e0d906973b5f5feb63891e9a7aaf4b490526eb479086595e431"
+    },
+    {
+      "path": "Server/lumapath_service/schema.py",
+      "sha256": "24c313fa33df325fd2452d580f7adfa655a64d3f21a5f801251284dc3a05b904"
+    },
+    {
+      "path": "Server/lumapath_service/service.py",
+      "sha256": "d9ed63780f8beff321982090d9cb02571e18a6b18b2bcb80ccb8746387c68cc2"
+    },
+    {
+      "path": "Server/lumapath_service/storage.py",
+      "sha256": "aa27b573ea914f5e35aba02b2f05452bf9ebcc2fa75e73802417b8b4d1e6fba1"
+    },
+    {
+      "path": "Server/requirements.txt",
+      "sha256": "f37d6122dcf9f42006f0c6df206da9a5c31707d1c7aee25781b71e7be60078c8"
+    },
+    {
+      "path": "Server/tests/test_intelligence.py",
+      "sha256": "578781ae9535075f5f61b764b0daf53d23cdfecca4c8cb55eaed06e85a6d5479"
+    },
+    {
+      "path": "Server/tests/test_service.py",
+      "sha256": "8244ead1a9d630d471e43de3bc14bb07be697e92cf62e20022ffa05c713530c8"
+    },
+    {
+      "path": "Tools/Routing/RouteTool.swift",
+      "sha256": "e73053358602a6d7050e894ec2e762ae46f17432a280d2a8feed7474695db23f"
+    },
+    {
+      "path": "project.yml",
+      "sha256": "af6480763b9e9e88ffa1eb20d33b26bb671b93b123968f1b422142c167813771"
+    }
+  ]
+}

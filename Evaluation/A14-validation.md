@@ -1,0 +1,11 @@
+# A14 local operations and release audit — October 21, 2026
+
+Implemented offline backup/isolated restore with integrity/object checks, reapplication of post-backup deletions, session/challenge invalidation, moderator-role reset, forward public version and preservation of current spend/quota state. Added resolved server dependency lock, operations/rotation/deployment/rollback instructions and native/research architecture/contribution handoff. Closed image privacy gap: proxy now rejects embedded metadata before sending, using the existing evidence validator.
+
+Executed checks: 60 service tests (48 previous, 8 assistance, 4 operations); 88 Swift package tests; 4 existing model-tool tests; 3 fusion tests; 3 study-accounting tests. Final counts are machine-recorded in Evaluation/Release/local-checks.json. Actual SQLite/object restore tests verify deleted evidence stays erased, old sessions revoked, roles reset, counters retained, bad hashes/traversal/existing output rejected. CLI backup/restore smoke and wall/CPU/RSS observations are recorded in that file; these are host software drill measurements, not iPhone thermal/resource performance.
+
+Unsigned `xcodebuild -project LumaPath.xcodeproj -scheme LumaPath -destination 'generic/platform=iOS Simulator' CODE_SIGNING_ALLOWED=NO build`: **BUILD SUCCEEDED**. Native lifecycle source reviewed; no native runtime modified. `devicectl list devices` still reports paired iPhone 17 unavailable. Hosted CI was extended but has not been run remotely.
+
+Release evidence audit checks R01–R22 and T01–T48 inventory, evidence files, no unreviewed default activation and model hash consistency. Missing scenario evidence is explicitly pending, never a manufactured pass. See Release/audit.json and Server/OPERATIONS.md. The A13 source freeze intentionally predates A14 inventory edits; recapture with a new configuration before physical collection.
+
+External gaps: no physical sensing/thermal/profile runs, no surveyed pilot, no consented real fusion data, no real Jev/model discovery/account retention agreement or secret rotation, no deployed backend/production restore/rollback, no B1–B14 full journey, no pair gate review. A4/A6 model/product gaps remain recorded. Therefore A14/M13 and integrated release acceptance remain incomplete; local operations tooling delivered. Production activation remains disabled.

@@ -1,0 +1,307 @@
+{
+  "schemaVersion": 2,
+  "provenance": "Generated aspect-fill coordinate examples, not ARKit recordings. Native capture uses ARFrame.displayTransform directly; hardware alignment validation remains pending.",
+  "cases": [
+    {
+      "name": "landscape-right-wide",
+      "frame": {
+        "envelope": {
+          "schemaVersion": 2,
+          "frameID": {
+            "sessionID": "00000000-0000-0000-0000-000000000010",
+            "generation": 1,
+            "sequence": 1
+          },
+          "sourceMode": "demoReplay",
+          "captureTimeMonotonic": 0,
+          "createdTimeMonotonic": 0,
+          "expiresAtMonotonic": 0.3
+        },
+        "imageSize": {
+          "width": 640,
+          "height": 480
+        },
+        "depthSize": {
+          "width": 160,
+          "height": 120
+        },
+        "confidenceSize": {
+          "width": 160,
+          "height": 120
+        },
+        "intrinsics": {
+          "fx": 500,
+          "fy": 500,
+          "cx": 320,
+          "cy": 240
+        },
+        "cameraToWorld": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "orientation": "landscapeRight",
+        "viewportSize": {
+          "width": 1280,
+          "height": 720
+        },
+        "imageToDisplay": {
+          "a": 1,
+          "b": 0,
+          "c": 0,
+          "d": 1.3333333333333333,
+          "tx": 0,
+          "ty": -0.16666666666666666
+        },
+        "depthKind": "sceneDepth",
+        "tracking": "normal"
+      },
+      "imageLandmark": [
+        0,
+        0.5
+      ],
+      "displayLandmark": [
+        0,
+        0.5
+      ]
+    },
+    {
+      "name": "portrait-tall",
+      "frame": {
+        "envelope": {
+          "schemaVersion": 2,
+          "frameID": {
+            "sessionID": "00000000-0000-0000-0000-000000000010",
+            "generation": 1,
+            "sequence": 1
+          },
+          "sourceMode": "demoReplay",
+          "captureTimeMonotonic": 0,
+          "createdTimeMonotonic": 0,
+          "expiresAtMonotonic": 0.3
+        },
+        "imageSize": {
+          "width": 640,
+          "height": 480
+        },
+        "depthSize": {
+          "width": 160,
+          "height": 120
+        },
+        "confidenceSize": {
+          "width": 160,
+          "height": 120
+        },
+        "intrinsics": {
+          "fx": 500,
+          "fy": 500,
+          "cx": 320,
+          "cy": 240
+        },
+        "cameraToWorld": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "orientation": "portrait",
+        "viewportSize": {
+          "width": 780,
+          "height": 1688
+        },
+        "imageToDisplay": {
+          "a": 0,
+          "b": 1,
+          "c": -1.623076923076923,
+          "d": 0,
+          "tx": 1.3115384615384615,
+          "ty": 0
+        },
+        "depthKind": "sceneDepth",
+        "tracking": "normal"
+      },
+      "imageLandmark": [
+        0,
+        0.5
+      ],
+      "displayLandmark": [
+        0.5,
+        0
+      ]
+    },
+    {
+      "name": "landscape-left-wide",
+      "frame": {
+        "envelope": {
+          "schemaVersion": 2,
+          "frameID": {
+            "sessionID": "00000000-0000-0000-0000-000000000010",
+            "generation": 1,
+            "sequence": 1
+          },
+          "sourceMode": "demoReplay",
+          "captureTimeMonotonic": 0,
+          "createdTimeMonotonic": 0,
+          "expiresAtMonotonic": 0.3
+        },
+        "imageSize": {
+          "width": 640,
+          "height": 480
+        },
+        "depthSize": {
+          "width": 160,
+          "height": 120
+        },
+        "confidenceSize": {
+          "width": 160,
+          "height": 120
+        },
+        "intrinsics": {
+          "fx": 500,
+          "fy": 500,
+          "cx": 320,
+          "cy": 240
+        },
+        "cameraToWorld": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "orientation": "landscapeLeft",
+        "viewportSize": {
+          "width": 1280,
+          "height": 720
+        },
+        "imageToDisplay": {
+          "a": -1,
+          "b": 0,
+          "c": 0,
+          "d": -1.3333333333333333,
+          "tx": 1,
+          "ty": 1.1666666666666667
+        },
+        "depthKind": "sceneDepth",
+        "tracking": "normal"
+      },
+      "imageLandmark": [
+        0,
+        0.5
+      ],
+      "displayLandmark": [
+        1,
+        0.5
+      ]
+    },
+    {
+      "name": "portrait-upside-down-tall",
+      "frame": {
+        "envelope": {
+          "schemaVersion": 2,
+          "frameID": {
+            "sessionID": "00000000-0000-0000-0000-000000000010",
+            "generation": 1,
+            "sequence": 1
+          },
+          "sourceMode": "demoReplay",
+          "captureTimeMonotonic": 0,
+          "createdTimeMonotonic": 0,
+          "expiresAtMonotonic": 0.3
+        },
+        "imageSize": {
+          "width": 640,
+          "height": 480
+        },
+        "depthSize": {
+          "width": 160,
+          "height": 120
+        },
+        "confidenceSize": null,
+        "intrinsics": {
+          "fx": 500,
+          "fy": 500,
+          "cx": 320,
+          "cy": 240
+        },
+        "cameraToWorld": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "orientation": "portraitUpsideDown",
+        "viewportSize": {
+          "width": 780,
+          "height": 1688
+        },
+        "imageToDisplay": {
+          "a": 0,
+          "b": -1,
+          "c": 1.623076923076923,
+          "d": 0,
+          "tx": -0.31153846153846154,
+          "ty": 1
+        },
+        "depthKind": "sceneDepth",
+        "tracking": "normal"
+      },
+      "imageLandmark": [
+        0,
+        0.5
+      ],
+      "displayLandmark": [
+        0.5,
+        1
+      ]
+    }
+  ]
+}

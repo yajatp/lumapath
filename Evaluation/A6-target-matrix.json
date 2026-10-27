@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "packageStatus": "inProgress",
+  "targets": [
+    {
+      "target": "door",
+      "researchAvailable": false,
+      "ordinaryLiveAvailable": false,
+      "defaultEnabled": false,
+      "modelID": null,
+      "sha256": null,
+      "weightIdentity": "No installed asset",
+      "heldOutEvaluated": false,
+      "deviceVerified": false,
+      "reason": "No trained/evaluated target detector supplied"
+    },
+    {
+      "target": "exitSign",
+      "researchAvailable": true,
+      "ordinaryLiveAvailable": false,
+      "defaultEnabled": false,
+      "modelID": "apple.vision.text",
+      "sha256": null,
+      "weightIdentity": "OS-managed revision 3; bytes unavailable",
+      "heldOutEvaluated": false,
+      "deviceVerified": false,
+      "reason": "Research OCR/rectangle candidate only; held-out/device/latency evidence pending"
+    },
+    {
+      "target": "elevatorIndicator",
+      "researchAvailable": false,
+      "ordinaryLiveAvailable": false,
+      "defaultEnabled": false,
+      "modelID": null,
+      "sha256": null,
+      "weightIdentity": "No installed asset",
+      "heldOutEvaluated": false,
+      "deviceVerified": false,
+      "reason": "No trained/evaluated target detector supplied"
+    },
+    {
+      "target": "handrail",
+      "researchAvailable": false,
+      "ordinaryLiveAvailable": false,
+      "defaultEnabled": false,
+      "modelID": null,
+      "sha256": null,
+      "weightIdentity": "No installed asset",
+      "heldOutEvaluated": false,
+      "deviceVerified": false,
+      "reason": "No trained/evaluated target detector supplied"
+    },
+    {
+      "target": "savedLandmark",
+      "researchAvailable": true,
+      "ordinaryLiveAvailable": false,
+      "defaultEnabled": false,
+      "modelID": null,
+      "sha256": null,
+      "weightIdentity": "Not a detector: selected-place A7 alignment provider",
+      "heldOutEvaluated": false,
+      "deviceVerified": false,
+      "reason": "Research provider requires selected current archive, confirmed label and current accepted alignment; physical/B7 acceptance pending",
+      "providerID": "LumaPathMemory.SavedLandmarkProvider"
+    }
+  ]
+}

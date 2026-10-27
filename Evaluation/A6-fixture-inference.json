@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "evidenceType": "Rendered images; actual iOS Simulator Vision inference; fixed test clock, not held-out/device latency",
+  "sceneLifetimeMilliseconds": 300,
+  "ordinaryLiveAvailable": false,
+  "results": [
+    {
+      "exitCandidates": 1,
+      "inferenceMilliseconds": 711.5722083253786,
+      "source": "renderedExitSign",
+      "textObservations": 1
+    },
+    {
+      "exitCandidates": 0,
+      "inferenceMilliseconds": 372.60616663843393,
+      "source": "renderedInstructionText",
+      "textObservations": 1
+    }
+  ]
+}

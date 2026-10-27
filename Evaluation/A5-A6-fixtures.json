@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "baselineHEAD": "96b17a0",
+  "includesPriorUncommittedA4": true,
+  "evidenceScope": "Synthetic software/native buffers and real OCR on rendered images; no physical or held-out target data",
+  "files": [
+    {
+      "path": ".github/workflows/build.yml",
+      "sha256": "e89e47768c2dbe04fbe3109ad4ad0cc9f6c58e44aaee3fb6a91da6a401b04f0f"
+    },
+    {
+      "path": "LumaPath/Goals/Resolution/GoalResolver.swift",
+      "sha256": "7165de815ef87f088626fc20d2fb9993f2463c48eb243cc2c3d9d02a5abb070a"
+    },
+    {
+      "path": "LumaPath/Models/ModelRegistry.swift",
+      "sha256": "5676f2b40b75fba8dd59c99ee3f737bffa4400f9414cac911aeca073b2303831"
+    },
+    {
+      "path": "LumaPath/Models/VisionInference.swift",
+      "sha256": "46fcb7de9f10fa7679dda7592f854618474311a55804698427392cf5b367bac7"
+    },
+    {
+      "path": "LumaPath/Perception/Geometry/GeometryProcessor.swift",
+      "sha256": "1139aec2a99f04ed17df9a30f6bfe8c62a1edc6096966ae953630d7cf8bc54ac"
+    },
+    {
+      "path": "LumaPath/Perception/Semantics/DepthAssociator.swift",
+      "sha256": "e32bd6d1ba86485730d54124c859237bbad2f71c121ee638651a5198a4cb0122"
+    },
+    {
+      "path": "LumaPath/Perception/WorldModel/AdvancedDetector.swift",
+      "sha256": "e3cdf4eea4cd7de1c55e6bc975e8c8e5ffc0c1d6289dea410e8e0f7e9f3df6bc"
+    },
+    {
+      "path": "LumaPath/Perception/WorldModel/AdvancedResearchProcessor.swift",
+      "sha256": "131d6bcd6760b8f69ba03eaa12caf4ae04fd60043fe9677270aeaa0bb235bd87"
+    },
+    {
+      "path": "LumaPath/Perception/WorldModel/MotionTracker.swift",
+      "sha256": "9f7122fda2fe41f518fb4e0c0610122910943358a1c3c5b68bd61f84685eed33"
+    },
+    {
+      "path": "LumaPath/Perception/WorldModel/RollingOccupancy.swift",
+      "sha256": "8bf39d3af4cf2e31e30e3be64bbb4d026c19df8d2ff78d43f362e2254b1bb4fb"
+    },
+    {
+      "path": "LumaPath/Risk/AdvancedHazardPolicy.swift",
+      "sha256": "76e8e8dc4512909e10644d0a1e9ac05ab51cc040c130d1b1117383074326cb05"
+    },
+    {
+      "path": "LumaPath/Risk/GeometryPipeline.swift",
+      "sha256": "154982c3f1a0db29ee1ce4e8ee2e16236b2971d30d7366d08afbd0a172232ac4"
+    },
+    {
+      "path": "LumaPath/Risk/HazardEventLedger.swift",
+      "sha256": "1bd0f25ff1e5d76ad01aeb25b06b9bc2f06ead3939b322e1f01fcba45d8184ea"
+    },
+    {
+      "path": "LumaPath/Sensors/SemanticImageCopy.swift",
+      "sha256": "2df3fdb914e5d935c4184e19fd9488c47b737a62f3fe6fafae94c1b418758441"
+    },
+    {
+      "path": "LumaPath/Shared/AdvancedContracts.swift",
+      "sha256": "2a0e6c792476ad05696e58afd23d175e627042d5288ee2c55398f181be98c05f"
+    },
+    {
+      "path": "LumaPath/Shared/GeometryContracts.swift",
+      "sha256": "14354dd49bd341e9473c408a67bed60a4ec2531595851cd5bac37e5df2d5dcb7"
+    },
+    {
+      "path": "LumaPath/Shared/SemanticContracts.swift",
+      "sha256": "7cf7534edbf41e5923b7b942b8e3ef8864379b6220edb7fa65b2e718ba0ec486"
+    },
+    {
+      "path": "LumaPath/Shared/SpatialContracts.swift",
+      "sha256": "0b88ace0a0f68d72708ecc32ae96c95f49b8de2fb113ddfd206b717fea367e19"
+    },
+    {
+      "path": "LumaPathNativeTests/SemanticInferenceTests.swift",
+      "sha256": "1aac33a0c16699a6586dfd0a68c2eb459e9af578a87aae06f54b96c3464b773f"
+    },
+    {
+      "path": "LumaPathPerceptionTests/AdvancedTests.swift",
+      "sha256": "6c00d44a5aeec04afdc7032fdbfa802b71c06fc68fbf7c0916a3f63d79dd349d"
+    },
+    {
+      "path": "LumaPathPerceptionTests/SemanticTests.swift",
+      "sha256": "790d589e3d128ea3f862b698c19b307b9060efeea4149eb9a4acbb305f8a0c31"
+    },
+    {
+      "path": "Package.swift",
+      "sha256": "8816d45fba2c4b5a736e8ea71beee393d2cc035b95337184703891d4945702b1"
+    },
+    {
+      "path": "Research/Models/evaluate_detections.py",
+      "sha256": "f1bd957cb0c3a96d26c4f7b637771ddd0588dbc20d7eaadc67fba1d89c0b32b6"
+    },
+    {
+      "path": "Research/Models/infer_evaluation.swift",
+      "sha256": "50ef1c2b41c87eecc074ef8209b776a692bc1ce6f9ae34850a568cdab36313b3"
+    },
+    {
+      "path": "Research/Models/prepare_dataset.py",
+      "sha256": "3b93125d1bb619190b34625d9718c1533db346576129f52bab37e59badb078db"
+    },
+    {
+      "path": "Research/Models/test_model_tools.py",
+      "sha256": "ef0b8b92c2b0300b22c4fd7c27c7aee933e99a3bcaacdf0405cbd32daaa2ea15"
+    },
+    {
+      "path": "Research/Models/train_detector.swift",
+      "sha256": "691cb9e7a6003317c2d181bff5aa5f076b9fc1cdbe243ea4f9ffa7f1876ae9f6"
+    },
+    {
+      "path": "project.yml",
+      "sha256": "596d559224d8c36e605a9707c58e0abc1b03af284843d719b9de4623d0da4472"
+    }
+  ]
+}

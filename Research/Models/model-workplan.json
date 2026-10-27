@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 1,
+  "owner": "Yajat",
+  "package": "A6",
+  "implementationStatus": "inProgress",
+  "originalEstimatePoints": 6,
+  "revisedProvisionalEstimatePoints": 20,
+  "actualHours": null,
+  "rebalanceStatus": "Pair review required; no ownership transfer or training schedule committed",
+  "assetsSuppliedByUser": false,
+  "targets": [
+    {
+      "target": "door",
+      "additionalPoints": 4,
+      "sourceCandidate": "https://data.mendeley.com/datasets/m9n4f6prn4/1",
+      "publisherLicense": "CC BY 4.0",
+      "status": "Sourcing/group metadata and attribution review pending; no assets imported",
+      "requiredWork": [
+        "source rights/provenance review",
+        "annotation and hard-negative audit",
+        "environment/session-disjoint split",
+        "train and export",
+        "register real checksum/class manifest",
+        "held-out precision/recall and absent-target evaluation",
+        "depth association error and iPhone latency"
+      ]
+    },
+    {
+      "target": "elevatorIndicator",
+      "additionalPoints": 4,
+      "sourceCandidate": null,
+      "publisherLicense": null,
+      "status": "No accepted detector or consented corpus",
+      "requiredWork": [
+        "source consented indicator/panel corpus",
+        "annotate panel context and counterexamples",
+        "train/export and inference integration",
+        "held-out evaluation and device latency"
+      ]
+    },
+    {
+      "target": "handrail",
+      "additionalPoints": 6,
+      "sourceCandidate": "https://universe.roboflow.com/da-nsoap/handrail",
+      "publisherLicense": "CC BY 4.0",
+      "status": "Publisher candidate only; download/provenance/group metadata review pending",
+      "requiredWork": [
+        "source rights and continuity annotations",
+        "train detector or segmentation/export",
+        "calibrate/evaluate implemented elongated 3D structure and temporal verifier with actual detector output",
+        "pipes/shelves/decorative-rail negatives",
+        "held-out evaluation, association error and device latency"
+      ]
+    },
+    {
+      "target": "exitSign",
+      "additionalPoints": 0,
+      "sourceCandidate": "https://developer.apple.com/documentation/vision/vnrecognizetextrequest",
+      "publisherLicense": "Apple platform terms; OS-managed weights not redistributed",
+      "status": "Real OCR/rectangle Research candidate implemented; held-out/physical target evaluation pending",
+      "requiredWork": [
+        "instructions/reflections/arrows negative corpus",
+        "held-out target metrics",
+        "physical sign/depth association and latency"
+      ]
+    },
+    {
+      "target": "savedLandmark",
+      "additionalPoints": 0,
+      "sourceCandidate": null,
+      "publisherLicense": null,
+      "status": "Research A7 provider/goal integration implemented; physical current-matching and B7 acceptance pending",
+      "requiredWork": [
+        "integrate current correspondence/ambiguity evidence and B7 invalidation",
+        "environment-disjoint physical G5 evaluation"
+      ]
+    }
+  ],
+  "lastLocalAssetCheck": "2026-10-21",
+  "blockingDependencies": [
+    "No accepted trained door/elevator/handrail assets or grouped labeled corpus in repository",
+    "No physical phone available for target/depth/latency acceptance"
+  ],
+  "continuationDecision": "Target assets and training remain pending; runtime and training/evaluation tooling are retained."
+}

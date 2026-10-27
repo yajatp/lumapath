@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "qualityConfigurationVersion": 1,
+  "source": "Analytic depth fixtures and programmatically allocated luma/depth buffers; no physical capture",
+  "files": [
+    {
+      "path": "LumaPath/Shared/Fixtures/A3-scenes.json",
+      "sha256": "307b5ea4d1a3429bc0682f99e6c818ea0d68d6c5c43901cac80d7a1be4751df8"
+    },
+    {
+      "path": "LumaPathPerceptionTests/QualityTests.swift",
+      "sha256": "51c5253b99cd1d90b563e1c4444f6a2202932d53d2aba240df98e9b223beeb04"
+    },
+    {
+      "path": "LumaPathNativeTests/DepthImageCopyTests.swift",
+      "sha256": "3569b2268dc1e0f5a94e92685dd9c68fcbad70de57521a4bc92821fef0cf96a7"
+    }
+  ]
+}

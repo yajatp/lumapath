@@ -1,0 +1,37 @@
+{
+  "auditedWorkingTree": true,
+  "blockers": [
+    "Physical G1/G3/G4/G5/G6/G8",
+    "Live provider/staging G7",
+    "Consented learned-fusion dataset",
+    "B1\u2013B14 integration and pair review",
+    "Physical performance/thermal and production rollback"
+  ],
+  "evidenceSHA256": {
+    "Evaluation/A1-validation.md": "85527c4af0f02c01717af995c439418620a94d336d2be5dfa9831b0edc522734",
+    "Evaluation/A10-validation.md": "c9851d30474f310a8f4d874271cccee1466d4fe74b89a859092ca506e6844c2d",
+    "Evaluation/A11-validation.md": "329ea1bc18f12cfbd1539276554d01f10ed8f07675f3dc9497c6d541abf3ceb1",
+    "Evaluation/A12-validation.md": "29bd6796fb7f9bdafa7a357386fdb3ed5f7fea5bdead86bb23eced6ff17227b2",
+    "Evaluation/A13-validation.md": "2d8f09ddc0193683c91d56ec7f7058d60df57dca19fb285ccaf058ca1f421809",
+    "Evaluation/A14-validation.md": "0699ce32dffcf061b427899cb1cc9410909651a14df229b65b206a17eca2e306",
+    "Evaluation/A2-validation.md": "8b00db571efde64126edb4fedcbbef71e2e2a1004f8007f17790c0c05e5a937f",
+    "Evaluation/A3-validation.md": "3ca1fc8afde472a0be32ccc7955e7bbaef46f2f370de04a4fd60d187b809ebd2",
+    "Evaluation/A4-completion-checks.json": "7ac38198ac24e69edc04eab518af17d55aff0f4e3b22f44beeec8576b5e2de4e",
+    "Evaluation/A4-validation.md": "74d19da7041c0a0f81d1e890de634d13283c16635a349cfe9417b6962bdb74ff",
+    "Evaluation/A5-validation.md": "b78188b446ad3283645ddbdfbc5f08cb3e7a18d31b0cc0b06b2f95ed71e07e83",
+    "Evaluation/A6-validation.md": "246d8b11b686f28bbaac957f892d3a25bc070a88082cad4ef79b5b5e43f88c2e",
+    "Evaluation/A7-validation.md": "65d3401e3b678bfd3cefe0717733b1c4acf14c3196a519fb0c21345f228b3b53",
+    "Evaluation/A8-validation.md": "ef22cda2b5e9756e21a69661cff74ca81b4d02c0bc50aedbc29f3141d53fcc2d",
+    "Evaluation/A9-validation.md": "11924f571e061c4427730a535249dc60c4e0f263fee1947d84cce4d492a5cb89",
+    "Evaluation/B1-validation.md": "388adb648ba43efb9da49ab08b33718067b8aed7df651255944b540a9f4435e9",
+    "Evaluation/B2-validation.md": "46396207e0951eb552084291f4bab17a5e199c6c1ddce24d0e7eef258b1e46cd",
+    "Evaluation/B3-validation.md": "fc5723aa92ca2be84fb8a95caa488631caaf317e86a81c20898338c78d378a1d"
+  },
+  "productionDeployment": false,
+  "releaseAcceptance": "pendingExternalEvidenceAndPairReview",
+  "requirements": 22,
+  "scenarios": 48,
+  "schemaVersion": 1,
+  "softwareAudit": "passed",
+  "sourceBaseCommit": "a9b23a8fbf3249eea916108b3a6a62a64ec18e09"
+}

@@ -1,0 +1,5 @@
+PyJWT[crypto]==2.13.0
+cryptography==49.0.0
+Pillow==11.3.0
+cffi==2.1.0
+pycparser==3.0

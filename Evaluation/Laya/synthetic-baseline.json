@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "synthetic": true,
+  "count": 8,
+  "liveActivation": false,
+  "decision": "pendingRealDataAndCalibration",
+  "upstream": "https://github.com/NandhaKishorM/laya/tree/b9fe351ce81e2d974bca2bf219c1e4030c0a05ea",
+  "baselineAccuracy": 1.0,
+  "layaExecuted": false,
+  "results": [
+    {
+      "id": "test-supported",
+      "expected": "depthAndVision",
+      "baseline": "depthAndVision"
+    },
+    {
+      "id": "test-no-depth",
+      "expected": "visionOnly",
+      "baseline": "visionOnly"
+    },
+    {
+      "id": "test-dark",
+      "expected": "abstain",
+      "baseline": "abstain"
+    },
+    {
+      "id": "test-expired",
+      "expected": "abstain",
+      "baseline": "abstain"
+    },
+    {
+      "id": "test-confidence-unknown",
+      "expected": "visionOnly",
+      "baseline": "visionOnly"
+    },
+    {
+      "id": "test-resource-limit",
+      "expected": "abstain",
+      "baseline": "abstain"
+    },
+    {
+      "id": "test-ambiguous-depth",
+      "expected": "visionOnly",
+      "baseline": "visionOnly"
+    },
+    {
+      "id": "test-tracking-limited",
+      "expected": "visionOnly",
+      "baseline": "visionOnly"
+    }
+  ],
+  "manifestSHA256": "320e78ff47596b4ef3bc113b26bacd2ae082acd6ffc2d7c94fd09caed1ae361f"
+}

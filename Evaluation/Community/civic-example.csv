@@ -1,0 +1,3 @@
+issueID,category,segmentID,side,level,latitude,longitude,firstObservedAt,lastObservedAt,independentConfirmationCount,status,applicableNow
+66412b3741a7750272aa7b638556a27d,sidewalkObstruction,pilot-1,north,ground,41.881,-87.621,1792583990.0,1792583990.0,0,verified,True
+

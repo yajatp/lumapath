@@ -1,0 +1,5 @@
+# A12 dataset card
+
+Only generated numeric synthetic data is bundled, licensed under the repository's terms (no third-party captures). Generator seed 17, 288 rows, 96 per split, 4 disjoint generated environment IDs and 8 sessions per split, unique source IDs. Generated labels come from a hand-defined feature equation, not real geometry, people or model outputs. No personal/location/image data or human consent is claimed. This checks tooling and leakage rejection, not generalization. Source generator: Research/Fusion/experiment.py; manifest and script hashes appear in model.json/metrics.json. No rows excluded. Conditions are toy bright/dark and matte/reflective labels, not measured illuminance/materials. No real dataset is currently available.
+
+For a real collection, add protected protocol, collection dates/device/calibration, inclusion/exclusion rules, environment/session grouping, independently annotated support labels and label agreement, measured lighting/surface definitions, accessible consent/withdrawal procedure, storage/deletion policy, rights/consent references and manifest checksum. Never mix generated and physical rows.

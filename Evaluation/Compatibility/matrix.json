@@ -1,0 +1,331 @@
+{
+  "schemaVersion": 1,
+  "minimumOS": "17.0",
+  "floorDecisionPending": true,
+  "gateStatus": "notEvaluated",
+  "supportedScope": "Provisional build target only; no physical configuration certified by this matrix",
+  "rows": [
+    {
+      "id": "oldestSupported",
+      "category": "oldestSupported",
+      "environment": "physical",
+      "status": "blocked",
+      "deviceModel": null,
+      "osVersion": null,
+      "operator": null,
+      "date": null,
+      "sourceCommit": null,
+      "configVersion": null,
+      "modelVersion": null,
+      "capabilityProfile": null,
+      "captureBackend": null,
+      "performancePreset": null,
+      "capabilityRevision": null,
+      "permissionState": null,
+      "thermalState": null,
+      "reviewedBy": null,
+      "evidencePaths": [
+        "Evaluation/Compatibility/C0-audit.md"
+      ],
+      "blocker": "No available device/OS and named operator for this representative; physical trials not run"
+    },
+    {
+      "id": "compactHomeButton",
+      "category": "compactHomeButton",
+      "environment": "physical",
+      "status": "blocked",
+      "deviceModel": null,
+      "osVersion": null,
+      "operator": null,
+      "date": null,
+      "sourceCommit": null,
+      "configVersion": null,
+      "modelVersion": null,
+      "capabilityProfile": null,
+      "captureBackend": null,
+      "performancePreset": null,
+      "capabilityRevision": null,
+      "permissionState": null,
+      "thermalState": null,
+      "reviewedBy": null,
+      "evidencePaths": [
+        "Evaluation/Compatibility/C0-audit.md"
+      ],
+      "blocker": "No available device/OS and named operator for this representative; physical trials not run"
+    },
+    {
+      "id": "olderNonLiDAR",
+      "category": "olderNonLiDAR",
+      "environment": "physical",
+      "status": "blocked",
+      "deviceModel": null,
+      "osVersion": null,
+      "operator": null,
+      "date": null,
+      "sourceCommit": null,
+      "configVersion": null,
+      "modelVersion": null,
+      "capabilityProfile": null,
+      "captureBackend": null,
+      "performancePreset": null,
+      "capabilityRevision": null,
+      "permissionState": null,
+      "thermalState": null,
+      "reviewedBy": null,
+      "evidencePaths": [
+        "Evaluation/Compatibility/C0-audit.md"
+      ],
+      "blocker": "No available device/OS and named operator for this representative; physical trials not run"
+    },
+    {
+      "id": "recentNonLiDAR",
+      "category": "recentNonLiDAR",
+      "environment": "physical",
+      "status": "blocked",
+      "deviceModel": "iPhone 17 (paired, unavailable)",
+      "osVersion": null,
+      "operator": null,
+      "date": null,
+      "sourceCommit": null,
+      "configVersion": null,
+      "modelVersion": null,
+      "capabilityProfile": null,
+      "captureBackend": null,
+      "performancePreset": null,
+      "capabilityRevision": null,
+      "permissionState": null,
+      "thermalState": null,
+      "reviewedBy": null,
+      "evidencePaths": [
+        "Evaluation/Compatibility/C0-audit.md"
+      ],
+      "blocker": "No available device/OS and named operator for this representative; physical trials not run"
+    },
+    {
+      "id": "olderLiDAR",
+      "category": "olderLiDAR",
+      "environment": "physical",
+      "status": "blocked",
+      "deviceModel": null,
+      "osVersion": null,
+      "operator": null,
+      "date": null,
+      "sourceCommit": null,
+      "configVersion": null,
+      "modelVersion": null,
+      "capabilityProfile": null,
+      "captureBackend": null,
+      "performancePreset": null,
+      "capabilityRevision": null,
+      "permissionState": null,
+      "thermalState": null,
+      "reviewedBy": null,
+      "evidencePaths": [
+        "Evaluation/Compatibility/C0-audit.md"
+      ],
+      "blocker": "No available device/OS and named operator for this representative; physical trials not run"
+    },
+    {
+      "id": "recentLiDAR",
+      "category": "recentLiDAR",
+      "environment": "physical",
+      "status": "blocked",
+      "deviceModel": null,
+      "osVersion": null,
+      "operator": null,
+      "date": null,
+      "sourceCommit": null,
+      "configVersion": null,
+      "modelVersion": null,
+      "capabilityProfile": null,
+      "captureBackend": null,
+      "performancePreset": null,
+      "capabilityRevision": null,
+      "permissionState": null,
+      "thermalState": null,
+      "reviewedBy": null,
+      "evidencePaths": [
+        "Evaluation/Compatibility/C0-audit.md"
+      ],
+      "blocker": "No available device/OS and named operator for this representative; physical trials not run"
+    },
+    {
+      "id": "simulator26",
+      "category": "softwareOnly",
+      "environment": "simulator",
+      "status": "fixtureVerified",
+      "deviceModel": "iPhone 17 Pro Simulator",
+      "osVersion": "26.3",
+      "operator": "Codex automated tests",
+      "date": "2026-10-22",
+      "sourceCommit": "903be2eb1518250fefbce9c15e9821a1b5a72ce7",
+      "configVersion": 3,
+      "modelVersion": null,
+      "capabilityProfile": "noCamera",
+      "captureBackend": null,
+      "performancePreset": null,
+      "capabilityRevision": null,
+      "permissionState": "notRequested",
+      "thermalState": "injected for policy tests",
+      "reviewedBy": null,
+      "evidencePaths": [
+        "Evaluation/Compatibility/C1-validation.md",
+        "Evaluation/Compatibility/C3-validation.md"
+      ],
+      "blocker": "Simulator cannot certify sensors, battery, physical output or installations on iOS 17"
+    }
+  ],
+  "scenarioResults": [
+    {
+      "scenarioID": "T49",
+      "status": "notRun",
+      "actualOutcome": "Run offline fresh launch on oldest supported physical phone",
+      "reviewedBy": null,
+      "evidencePaths": [
+        "Evaluation/Compatibility/C0-audit.md"
+      ]
+    },
+    {
+      "scenarioID": "T50",
+      "status": "partialSoftware",
+      "actualOutcome": "API/capability fixtures pass; real non-LiDAR baseline pending",
+      "reviewedBy": null,
+      "evidencePaths": [
+        "Evaluation/Compatibility/C1-validation.md"
+      ]
+    },
+    {
+      "scenarioID": "T51",
+      "status": "partialSoftware",
+      "actualOutcome": "Existing depth fixtures/native consumers pass; physical depth regression pending",
+      "reviewedBy": null,
+      "evidencePaths": [
+        "Evaluation/Compatibility/C1-validation.md"
+      ]
+    },
+    {
+      "scenarioID": "T52",
+      "status": "partialSoftware",
+      "actualOutcome": "Bounded fallback/session replacement fixtures pass; physical AR release/start pending",
+      "reviewedBy": null,
+      "evidencePaths": [
+        "Evaluation/Compatibility/C1-validation.md"
+      ]
+    },
+    {
+      "scenarioID": "T53",
+      "status": "partialSoftware",
+      "actualOutcome": "Denied/interruption domain and simulator-unavailable checks pass; physical recovery and manual workflows pending",
+      "reviewedBy": null,
+      "evidencePaths": [
+        "Evaluation/Compatibility/C1-validation.md"
+      ]
+    },
+    {
+      "scenarioID": "T54",
+      "status": "partialSoftware",
+      "actualOutcome": "Expiry/cancellation fixtures pass; physical depth-loss and spoken limitation pending",
+      "reviewedBy": null,
+      "evidencePaths": [
+        "Evaluation/Compatibility/C1-validation.md"
+      ]
+    },
+    {
+      "scenarioID": "T55",
+      "status": "partialSoftware",
+      "actualOutcome": "Fresh generation/late callback fixtures pass; physical foreground/capability restoration pending",
+      "reviewedBy": null,
+      "evidencePaths": [
+        "Evaluation/Compatibility/C1-validation.md"
+      ]
+    },
+    {
+      "scenarioID": "T56",
+      "status": "partialSoftware",
+      "actualOutcome": "Capability combinations avoid model-name allowlists; real hardware probes pending",
+      "reviewedBy": null,
+      "evidencePaths": [
+        "Evaluation/Compatibility/C0-audit.md"
+      ]
+    },
+    {
+      "scenarioID": "T57",
+      "status": "partialSoftware",
+      "actualOutcome": "Injected resource policy tests pass; actual thermal/pressure/memory performance pending",
+      "reviewedBy": null,
+      "evidencePaths": [
+        "Evaluation/Compatibility/C3-validation.md"
+      ]
+    },
+    {
+      "scenarioID": "T58",
+      "status": "partialSoftware",
+      "actualOutcome": "Model/output gates stay closed; B5\u2013B11 fallback interactions unfinished",
+      "reviewedBy": null,
+      "evidencePaths": [
+        "Evaluation/Compatibility/C2-validation.md"
+      ]
+    },
+    {
+      "scenarioID": "T59",
+      "status": "partialSoftware",
+      "actualOutcome": "Camera-only Research Find consumer keeps current-image position and unknown distance; original 300 ms expiry retained; physical OCR timing and ordinary model activation pending",
+      "reviewedBy": null,
+      "evidencePaths": [
+        "Evaluation/Compatibility/C2-validation.md",
+        "Evaluation/B6-validation.md"
+      ]
+    },
+    {
+      "scenarioID": "T60",
+      "status": "partialSoftware",
+      "actualOutcome": "Manual names/notes CRUD implemented with Linux persistence checks; native/UI/device checks and manual routes/reports pending",
+      "reviewedBy": null,
+      "evidencePaths": [
+        "Evaluation/Compatibility/C2-validation.md",
+        "Evaluation/B7-validation.md"
+      ]
+    },
+    {
+      "scenarioID": "T61",
+      "status": "partialSoftware",
+      "actualOutcome": "Largest Dynamic Type profile controls pass on simulator; smallest screen/rotation/VoiceOver pending",
+      "reviewedBy": null,
+      "evidencePaths": [
+        "Evaluation/Compatibility/C3-validation.md"
+      ]
+    },
+    {
+      "scenarioID": "T62",
+      "status": "notRun",
+      "actualOutcome": "Run 30-minute physical resource trials and cold start; resource-trials.csv has no measurements",
+      "reviewedBy": null,
+      "evidencePaths": [
+        "Evaluation/Compatibility/C3-validation.md"
+      ]
+    },
+    {
+      "scenarioID": "T63",
+      "status": "partialSoftware",
+      "actualOutcome": "Source/compiled metadata audit only; iOS 17 installation and final floor decision pending",
+      "reviewedBy": null,
+      "evidencePaths": [
+        "Evaluation/Compatibility/C4-validation.md"
+      ]
+    },
+    {
+      "scenarioID": "T64",
+      "status": "partialSoftware",
+      "actualOutcome": "Optional v3/legacy strictness/frame consumer fixtures pass; real upgrade/restart/persisted migration pending",
+      "reviewedBy": null,
+      "evidencePaths": [
+        "Evaluation/Compatibility/C1-validation.md"
+      ]
+    }
+  ],
+  "targetOSVersions": [
+    "17.0",
+    "26.3"
+  ],
+  "reviewedBy": null
+}

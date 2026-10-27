@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-22",
+  "sourceBaseCommit": "8c676853c8c8d4176cf603a534a54ebc566a3fec",
+  "includesWorkingTreeChanges": true,
+  "sourceSHA256": {
+    "LumaPath/App/LumaPathApp.swift": "cf0d77ff8495e0eeff0231ba74709b0ef8643729acd24e4449d9e6f6fe677718",
+    "LumaPath/App/SpatialPlacesModel.swift": "e56610eb643c41bade6c604f6b4cccca54b4eaee165cf9cc0bedf207e50f7120",
+    "LumaPath/App/SpatialPlacesView.swift": "724570256366cb2c5f335914370e631c782bf3c8dc2f7e9c59475a467e48278b",
+    "LumaPath/Memory/PlaceArchive.swift": "a65bfff5ee89d4a4cc9c3e460fd895363db2573e2eb73df044d04cc676ff9d7f",
+    "LumaPath/Memory/PlaceScan.swift": "a41c2114244ad113bd9ea370f75916d94d5d739683996b57948fd0f90341b686",
+    "LumaPath/Sensors/ARKitDriver.swift": "c8a54b8b3fe62cfcdb55a0e5ad13bb0529697b687f9a97674815323995696d79",
+    "LumaPathMemoryTests/PlaceScanTests.swift": "5846233740ea9e5f1e3f4b973dd636783bc50edd83cf843c2648d84a74d5ac72",
+    "LumaPathNativeTests/SpatialPlacesTests.swift": "e824064e6751a1ff353712bec4232b4b3ec1ebce38ae39b99b07479782bce090",
+    "LumaPathUITests/SpatialPlacesJourneyTests.swift": "5f1766880cdc86f07374b2316d93cbfb8bd92fce99059096f704f13ec2243972",
+    "LumaPath.xcodeproj/project.pbxproj": "333a6202f490bf08e6ab0c16ba1d78d510475e2db135d230859f6ef152ac7a59"
+  },
+  "packageTests": {
+    "passed": 172
+  },
+  "pythonTests": {
+    "models": 4,
+    "fusion": 3,
+    "comparativeStudy": 3,
+    "releaseAudit": 7,
+    "service": 60
+  },
+  "nativeAndUI": {
+    "focused": {
+      "devicesAndConfigurations": [
+        {
+          "device": {
+            "architecture": "arm64",
+            "deviceId": "805CB9F9-E484-4D6A-938F-2418C3131D21",
+            "deviceName": "iPhone 17 Pro",
+            "modelName": "iPhone 17 Pro",
+            "osBuildNumber": "23D8133",
+            "osVersion": "26.3.1",
+            "platform": "iOS Simulator"
+          },
+          "expectedFailures": 0,
+          "failedTests": 0,
+          "passedTests": 3,
+          "skippedTests": 0,
+          "testPlanConfiguration": {
+            "configurationId": "1",
+            "configurationName": "Test Scheme Action"
+          }
+        }
+      ],
+      "environmentDescription": "LumaPath \u00b7 Built with macOS 26.7",
+      "expectedFailures": 0,
+      "failedTests": 0,
+      "finishTime": 1792729358.026,
+      "passedTests": 3,
+      "result": "Passed",
+      "skippedTests": 0,
+      "startTime": 1792729319.02,
+      "statistics": [],
+      "testFailures": [],
+      "title": "Test - LumaPath",
+      "topInsights": [],
+      "totalTestCount": 3
+    },
+    "regression": {
+      "devicesAndConfigurations": [
+        {
+          "device": {
+            "architecture": "arm64",
+            "deviceId": "805CB9F9-E484-4D6A-938F-2418C3131D21",
+            "deviceName": "iPhone 17 Pro",
+            "modelName": "iPhone 17 Pro",
+            "osBuildNumber": "23D8133",
+            "osVersion": "26.3.1",
+            "platform": "iOS Simulator"
+          },
+          "expectedFailures": 0,
+          "failedTests": 0,
+          "passedTests": 24,
+          "skippedTests": 0,
+          "testPlanConfiguration": {
+            "configurationId": "1",
+            "configurationName": "Test Scheme Action"
+          }
+        }
+      ],
+      "environmentDescription": "LumaPath \u00b7 Built with macOS 26.7",
+      "expectedFailures": 0,
+      "failedTests": 0,
+      "finishTime": 1792729501.111,
+      "passedTests": 24,
+      "result": "Passed",
+      "skippedTests": 0,
+      "startTime": 1792729390.749,
+      "statistics": [],
+      "testFailures": [],
+      "title": "Test - LumaPath",
+      "topInsights": [
+        {
+          "category": "Longest Test Runs",
+          "impact": "50% of duration",
+          "text": "1 longest test run with outlier durations exceeding 0.81s (three standard deviations)"
+        }
+      ],
+      "totalTestCount": 24
+    }
+  },
+  "initialFailures": [
+    "Native compile: caught error variable shadowed model error property; corrected self.error references.",
+    "Initial large-text navigation test failed with a lazy offscreen list link. Moved spatial navigation to toolbar and corrected bounded scroll lookup; focused rerun passed."
+  ],
+  "releaseSoftwareAudit": "passed",
+  "releaseAcceptance": "pendingExternalEvidenceAndPairReview",
+  "physicalMapCapture": "notExecutedPairedPhoneUnavailable",
+  "hostedCI": "pendingForThisIncrement",
+  "limits": [
+    "No real AR scan or physical locked-device protection test executed.",
+    "No current alignment/remembered-goal/change consumer integration in this stage.",
+    "Full UI suite not rerun; new spatial journey and existing manual-place journeys passed."
+  ]
+}

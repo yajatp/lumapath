@@ -1,0 +1,18 @@
+{
+  "files": {
+    "Evaluation/feature-status.json": "fe85b924f50572221fb6494dc7aa97af7e8f9832cd8714e6d6fed17ee27597b5",
+    "LumaPath/Shared/AdvancedContracts.swift": "2a0e6c792476ad05696e58afd23d175e627042d5288ee2c55398f181be98c05f",
+    "LumaPath/Shared/Configuration.swift": "c498aed3dac28e6f82d890124ebad431da3c8b401a8d358221979d4f6e4c07f7",
+    "LumaPath/Shared/GeometryContracts.swift": "14354dd49bd341e9473c408a67bed60a4ec2531595851cd5bac37e5df2d5dcb7",
+    "LumaPath/Shared/QualityContracts.swift": "2bda8187007d55dbed9293f8cf811618ad3a10d7d4ac41fe28c41d128867a26b",
+    "LumaPath/Shared/SpatialContracts.swift": "0b88ace0a0f68d72708ecc32ae96c95f49b8de2fb113ddfd206b717fea367e19"
+  },
+  "methods": [
+    "deterministicBaseline",
+    "currentProducer"
+  ],
+  "physicalAcceptance": "pending",
+  "schemaVersion": 1,
+  "sensorInterpretation": "Processed ARKit depth; not independent raw LiDAR and camera sensors",
+  "sourceCommit": "cccc86ff0674ca7994bb185be967a6b22e58c4a5"
+}

@@ -1,0 +1,56 @@
+# macOS and Xcode
+.DS_Store
+.build/
+.swiftpm/
+DerivedData/
+xcuserdata/
+*.xcuserstate
+*.xcresult/
+*.xcarchive/
+*.ipa
+*.dSYM/
+
+# Python and local service data
+__pycache__/
+*.py[cod]
+.venv*/
+venv/
+Server/.local-data/
+*.sqlite
+*.sqlite3
+*.db
+
+# Credentials, signing identities, and local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.p8
+*.mobileprovision
+credentials*.json
+service-account*.json
+
+# Private recordings, development conversations, and generated review files
+*.lumacapture.json
+Distribution/
+.codex/
+.claude/
+.agents/
+.impeccable/
+graphify-out/
+AGENTS.md
+docs/AI_USAGE*.md
+*chat-export*
+*conversation-export*
+Evaluation/ReferenceImages/
+
+# Private submission and planning material
+*-Build-Prompt*.md
+*-Execution-Plan.md
+docs/CAC-*-SUBMISSION.md
+docs/CAC-*-PRESENTATION-SCRIPT.md
+docs/*PRESENTATION-CONTENT-BRIEF.md
+docs/STATUS_*.md
+docs/WORK_SPLIT.md

@@ -1,0 +1,1 @@
+trialID,matrixRow,deviceModel,osVersion,sourceCommit,configVersion,modelVersion,profile,backend,preset,brightness,batteryCondition,environment,durationSeconds,coldStartMs,firstUsableFrameMs,pipelineP50Ms,pipelineP95Ms,pipelineP99Ms,effectiveFPS,droppedFrames,peakMemoryMB,batteryStartPercent,batteryEndPercent,thermalTransitions,origin,result,evidencePath,reviewer

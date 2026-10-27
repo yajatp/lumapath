@@ -1,0 +1,7 @@
+# A11 local assistance producer — October 21, 2026
+
+Implemented authenticated task-specific Jev proxy, fixed official provider origin/no redirects, pinned model, independent text/image consent, persistent quotas and conservative spend reservations, timeout rejection, circuit breaker, bounded output validation and redacted operational errors. Image presence and original frame identity prevent treating an absent or delayed box as current geometry. Local hazard modules do not import this service.
+
+Executed: `PYTHONPATH=Server python3 -m unittest discover -s Server/tests -v` — **55 tests pass** (48 prior service tests and 7 assistance tests). Fixtures cover envelope/minimal state, bad schema/consent, missing provider, invalid selection/model, late output/breaker recovery, persistent quota/cap, intent consistency, human review, image presence/bounds/frame identity, authenticated HTTP and log redaction. Provider transport is injected; these are not live-call results.
+
+[Provider review](Cloud/provider-review.md) and [service contract/setup](../Server/README.md) contain exact versions and activation constraints. Live transport, authenticated model discovery, contractual retention, account limits and billing bound require actual credentials/operator agreement. B11 freshness/cancellation/consent UI, three-policy evaluation, real staging/G7/M10 and human review remain pending. External validation assets remain unavailable. A11 local implementation delivered; package acceptance incomplete.

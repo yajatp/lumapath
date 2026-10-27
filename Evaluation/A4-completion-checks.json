@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-21",
+  "sourceBaseCommit": "a9b23a8fbf3249eea916108b3a6a62a64ec18e09",
+  "remoteMergedThrough": "8a0f05651dc08dd9374df3b0a770d6c82c9aa368",
+  "qualityConfigurationVersion": 2,
+  "sourceSHA256": {
+    "LumaPath/App/LiveCameraView.swift": "7091859c3910d2d66126e8d1117f0446492aa6b2bfce77416cecbbbd58512082",
+    "LumaPath/Shared/QualityContracts.swift": "cc2ad6a0c8067790d1b3ed14013955e0881199bbea89a8902a22658947232ea2",
+    "LumaPath/Shared/SessionState.swift": "41d427d14d2ca99c35798779eba2beb481920b12d852c20ea242b40fc6f38235",
+    "LumaPath/Perception/Quality/QualityEvaluator.swift": "f572d8f6ff9e17b7381c9546f0796781c396e263ffe226a70c5e729f09222817",
+    "LumaPath/Risk/QualitySessionPipeline.swift": "dbcf6008985bcf71abbe4bef81910c03440a238b0e7d43b61aca42bc550d3c0b",
+    "LumaPath/Feedback/FeedbackCoordinator.swift": "f24954d5a6a318705f38ad1fe4103acb8ce700386ce056766378e097fe7ac7b6",
+    "LumaPathPerceptionTests/QualityTests.swift": "28d56f6dbb0e429031f14cd2f893d30671c05c4927a6bfa8f697e92e21961aeb",
+    "LumaPathFeedbackTests/FeedbackTests.swift": "34360244d5a7d561839c88b3b7c2333e9ca1423cef0cce37060804ce7918e2f4",
+    "LumaPathNativeTests/DepthImageCopyTests.swift": "a1d829e43f20378d903a3e7fb59dd42842649d873b7acbf4e21558b04f42258b",
+    "LumaPathUITests/FeedbackJourneyTests.swift": "75c2ae72fefa6ec33a71f547428d5747980bc14281e2a32a149b5f41576de288"
+  },
+  "swiftPackage": {
+    "status": "passed",
+    "count": 117
+  },
+  "nativeSimulator": {
+    "status": "passed",
+    "count": 13
+  },
+  "feedbackUIRecheck": {
+    "status": "passed",
+    "count": 2
+  },
+  "initialFullUI": {
+    "status": "failed",
+    "count": 10,
+    "passed": 9,
+    "failures": 1,
+    "reason": "Immediate post-foreground Stop preview hittability check; bounded expectation retains control reachability requirement"
+  },
+  "distinctUICasesVerified": 10,
+  "fullSchemeAfterFix": "Not rerun; final selected native and feedback suites cover changed sources; other 8 UI cases passed in initial full run",
+  "physicalDeviceResults": [],
+  "A6": "blockedMissingAcceptedModelsDataAndPhysicalEvidence",
+  "hostedCIRun": "notExecuted",
+  "pushPerformed": false
+}

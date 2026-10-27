@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 2,
+  "sourceMode": "demoReplay",
+  "provenance": "Original synthetic fixture generated for A1; no captured personal data.",
+  "limitations": "Orientation transforms are generated unit-square math, not measured ARKit viewport transforms. No depth pixel map or live sensing claim.",
+  "files": [
+    {
+      "path": "LumaPath/Shared/Fixtures/frames.json",
+      "sha256": "f5d037660501004c2bc1c7c2a3bc2201cd6de16e2699aa779c7687bde09ab351"
+    },
+    {
+      "path": "LumaPath/Shared/Fixtures/ordinary-to-unavailable.json",
+      "sha256": "49d8bff6f3bd3da41de4cafff1ce9a90bbbb32b75c8212e98a9413002fd5d937"
+    },
+    {
+      "path": "LumaPath/Shared/Fixtures/synthetic-scene.png",
+      "sha256": "1c11587484ad75cefd05dbebb5ce43e272706cd2d04f67f67e9f29dbce52eeef"
+    }
+  ]
+}

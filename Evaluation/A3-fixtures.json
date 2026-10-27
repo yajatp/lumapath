@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 2,
+  "configurationVersion": 2,
+  "baseline": "7e39cf4",
+  "provenance": "Analytic synthetic depth patches/floor; allocated CVPixelBuffers in native tests; no ARKit recording or physical sensing evidence.",
+  "files": [
+    {
+      "path": "LumaPath/Shared/Fixtures/A3-scenes.json",
+      "sha256": "307b5ea4d1a3429bc0682f99e6c818ea0d68d6c5c43901cac80d7a1be4751df8"
+    },
+    {
+      "path": "LumaPath/Shared/Fixtures/aspect-fill-examples.json",
+      "sha256": "b38c94933ab3397677b45d3592602b0e744ad64a07c78384024d60291d0d2a46"
+    },
+    {
+      "path": "LumaPath/Shared/Fixtures/frames.json",
+      "sha256": "f5d037660501004c2bc1c7c2a3bc2201cd6de16e2699aa779c7687bde09ab351"
+    },
+    {
+      "path": "LumaPath/Shared/Fixtures/ordinary-to-unavailable.json",
+      "sha256": "49d8bff6f3bd3da41de4cafff1ce9a90bbbb32b75c8212e98a9413002fd5d937"
+    },
+    {
+      "path": "LumaPath/Shared/Fixtures/synthetic-scene.png",
+      "sha256": "1c11587484ad75cefd05dbebb5ce43e272706cd2d04f67f67e9f29dbce52eeef"
+    }
+  ]
+}

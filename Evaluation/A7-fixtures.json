@@ -1,0 +1,80 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-21",
+  "baseline": "c1b817f",
+  "scope": "A5 revalidation; A6 handrail software; A7 Research memory producer",
+  "fixtures": "Analytic synthetic geometry and malformed archives; no physical or held-out target dataset",
+  "results": {
+    "swiftPackageTests": 77,
+    "nativeSimulatorTests": 8,
+    "pythonModelToolTests": 4,
+    "physicalTests": null,
+    "heldOutModelMetrics": null
+  },
+  "sources": [
+    {
+      "path": "LumaPath.xcodeproj/project.pbxproj",
+      "sha256": "806eb4cc9082feb814521618e0fec22f7f5cde6676be4d032238b10abbd707d0"
+    },
+    {
+      "path": "LumaPath/Goals/Resolution/GoalResolver.swift",
+      "sha256": "7f9b21aad7ed114f86e4e8dfeebdd5ea865f0c3b1109176abfae8f2efc8b0e9b"
+    },
+    {
+      "path": "LumaPath/Memory/PlaceArchive.swift",
+      "sha256": "4587d514eea685abccdf102a63a3660f41984d3815e8b6cf20dd68b4cde156cc"
+    },
+    {
+      "path": "LumaPath/Memory/PlaceChanges.swift",
+      "sha256": "7386446dbb4c3fc57e441a7add74656a6bd3508dbf733b6608f599c8993dc038"
+    },
+    {
+      "path": "LumaPath/Memory/PlaceGeometryMatcher.swift",
+      "sha256": "5fc157761baa4381306bc0fd1297d5d93585cdad2fd79517334a5cc6b2dc71bd"
+    },
+    {
+      "path": "LumaPath/Memory/Relocalization.swift",
+      "sha256": "7d901c3c2fecb8b1858c3f0b14cc3c21ba1e549f2fe65036f70fc136b881c2f9"
+    },
+    {
+      "path": "LumaPath/Memory/WorldMapArchive.swift",
+      "sha256": "b4af22f0fefc55e49c724fe2d6141a98f6d06685ed03753330f9005f0baf3773"
+    },
+    {
+      "path": "LumaPath/Models/ModelRegistry.swift",
+      "sha256": "92f44989ed6743da23ccfaef0f6457263622fbd8ab2c49a35ee4db2ad009188e"
+    },
+    {
+      "path": "LumaPath/Perception/Semantics/HandrailStructureVerifier.swift",
+      "sha256": "c69fbd7a892980100020c23e113f199629f98620f619b484fceb9ac858ef3945"
+    },
+    {
+      "path": "LumaPath/Sensors/ARKitDriver.swift",
+      "sha256": "b78e03d7e2a889074e63775cc1b66165e0e21cb2e9e478192ba153813873b2fe"
+    },
+    {
+      "path": "LumaPath/Shared/SemanticContracts.swift",
+      "sha256": "0e424de97a150cfb39c6dbacb727dc87e976b70a351106680d1e8ec215b8a203"
+    },
+    {
+      "path": "LumaPathMemoryTests/MemoryTests.swift",
+      "sha256": "5547f37a62c658583ada87872635770d819d2c1634e8781241ae59864dcee551"
+    },
+    {
+      "path": "LumaPathNativeTests/MemoryArchiveTests.swift",
+      "sha256": "d2cc739d75270732ef33bb6fa2e4a7e70b9a6c255a92459d7895fdc3231fa58f"
+    },
+    {
+      "path": "LumaPathPerceptionTests/HandrailTests.swift",
+      "sha256": "374d100fd4b304fac60b95f98df19b6c23849dcf50b729019b0eb3242838f2a4"
+    },
+    {
+      "path": "Package.swift",
+      "sha256": "aca9b28f871ab257a8e84567f5dd44da26c8edba334b036834186df90ecc3e12"
+    },
+    {
+      "path": "project.yml",
+      "sha256": "27e10b83f9be12ab9b522be500559d25047f419f3c15ff2dc5871cbe7d464388"
+    }
+  ]
+}

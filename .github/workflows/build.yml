@@ -1,0 +1,67 @@
+name: Build and test
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  foundation:
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify generated project with XcodeGen 2.46.0
+        run: |
+          brew install xcodegen
+          xcodegen --version | grep '2.46.0'
+          xcodegen generate
+          git diff --exit-code -- LumaPath.xcodeproj
+      - name: Domain, sensing, geometry, hazard, and goal tests
+        run: swift test
+      - name: Model data and evaluation checks
+        run: python3 -m unittest discover -s Research/Models -p 'test_*.py'
+      - name: Fusion and comparative-study tools
+        run: |
+          python3 -m unittest discover -s Research/Fusion -v
+          python3 -m unittest discover -s Research/Validation -v
+          python3 -m unittest discover -s Tools/Release -p 'test_*.py' -v
+          python3 Tools/Release/audit.py
+      - name: Compile model training and inference tools
+        run: |
+          swiftc Research/Models/train_detector.swift -o "$RUNNER_TEMP/lumapath-train-detector"
+          "$RUNNER_TEMP/lumapath-train-detector" --help
+          swiftc Research/Models/infer_evaluation.swift -o "$RUNNER_TEMP/lumapath-infer-evaluation"
+          "$RUNNER_TEMP/lumapath-infer-evaluation" --help
+      - name: Ensure watch simulator platform is installed
+        run: xcodebuild -downloadPlatform watchOS
+      - name: Unsigned watch simulator build
+        run: xcodebuild -project LumaPath.xcodeproj -scheme LumaPathWatch -destination 'generic/platform=watchOS Simulator' CODE_SIGNING_ALLOWED=NO build
+      - name: Unsigned iPhone simulator build
+        run: xcodebuild -project LumaPath.xcodeproj -scheme LumaPath -destination 'generic/platform=iOS Simulator' CODE_SIGNING_ALLOWED=NO build
+      - name: Native and accessible shell journeys
+        run: |
+          DEVICE_ID=$(xcrun simctl list devices available -j | python3 -c 'import json,sys; d=json.load(sys.stdin)["devices"]; print(next(x["udid"] for runtime, devices in d.items() if "iOS" in runtime for x in devices if "iPhone" in x["name"]))')
+          xcodebuild -project LumaPath.xcodeproj -scheme LumaPath -destination "platform=iOS Simulator,id=$DEVICE_ID" CODE_SIGNING_ALLOWED=NO -parallel-testing-enabled NO -resultBundlePath "$RUNNER_TEMP/LumaPathUI.xcresult" test
+      - name: Export UI test screenshots
+        if: always()
+        run: |
+          if [ -d "$RUNNER_TEMP/LumaPathUI.xcresult" ]; then
+            xcrun xcresulttool export attachments --path "$RUNNER_TEMP/LumaPathUI.xcresult" --output-path "$RUNNER_TEMP/lumapath-ui-screenshots"
+          fi
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: lumapath-ui-screenshots
+          path: ${{ runner.temp }}/lumapath-ui-screenshots
+          if-no-files-found: ignore
+          retention-days: 7
+
+  community-service:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.14'
+      - name: Reject private files in the public repository
+        run: python Tools/Checks/check_public_files.py
+      - run: python -m pip install -r Server/requirements.lock
+      - name: Community service authorization, storage and workflow tests
+        run: PYTHONPATH=Server python -m unittest discover -s Server/tests -v

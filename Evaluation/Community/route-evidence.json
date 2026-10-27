@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "version": 4,
+  "generatedAt": 1792584000.0,
+  "validUntil": 1792584300.0,
+  "complete": true,
+  "coverage": "allPublicIssues",
+  "issues": [
+    {
+      "issueID": "66412b3741a7750272aa7b638556a27d",
+      "revision": 3,
+      "segmentID": "pilot-1",
+      "side": "north",
+      "level": "ground",
+      "state": "verified",
+      "observedAt": 1792583990.0,
+      "expiresAt": 1792670390.0,
+      "verifiedBarrier": true
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "evidenceType": "Analytic replay, not captured sensor trajectories",
+  "results": [
+    {
+      "encounterSeconds": 1.3999999205271303,
+      "positionInterpolationResidualMeters": 5.961656451195836e-08,
+      "source": "analyticApproachingPlaneReplay",
+      "velocityUncertaintyMetersPerSecond": 0.16666676602760913,
+      "worldSpeedMetersPerSecond": 1.0002000197483847
+    }
+  ]
+}
