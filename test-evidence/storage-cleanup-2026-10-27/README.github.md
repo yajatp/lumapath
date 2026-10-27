@@ -1,0 +1,1 @@
+Preserved app test results and build logs from the October 27, 2026 cleanup. The archive was SHA-256 verified. Simulator-wide diagnostic files containing account/credential state were excluded from public upload. The manifest maps archive members to their original paths and records omitted diagnostic files. Extract into a separate folder to inspect or restore test bundles.
