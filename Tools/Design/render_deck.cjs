@@ -9,7 +9,7 @@ const {execFileSync} = require('node:child_process');
   const browser = await chromium.launch({channel: 'chrome', headless: true});
   try {
     const page = await browser.newPage({viewport: {width: 1600, height: 1200}, deviceScaleFactor: 2});
-    await page.goto(pathToFileURL(path.join(root, 'docs/demos/index.html')).href);
+    await page.goto(pathToFileURL(path.join(root, '.impeccable/reference/index.html')).href);
     await page.evaluate(() => document.fonts.ready);
     const sections = page.locator('section');
     const names = ['home', 'find', 'live', 'objects', 'accessibility', 'watch'];

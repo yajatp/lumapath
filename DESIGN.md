@@ -1,11 +1,13 @@
 ---
-name: LumaPath MHS
-description: Native accessibility tools in the user-supplied MHS visual system.
+name: LumaPath
+description: Accessible native interfaces for LumaPath on iPhone and Apple Watch.
 colors:
   teal: "#006B63"
   teal-pressed: "#00564F"
   mint: "#A7F3D0"
   mint-pressed: "#8BDFB9"
+  lantern-flame: "#F4A93A"
+  lantern-flame-core: "#FFF1C7"
   light-canvas: "#F5F7F4"
   light-card: "#FFFFFF"
   light-sunken: "#E9F0ED"
@@ -92,11 +94,9 @@ components:
 
 ## Overview
 
-**Creative North Star: “The MHS LumaPath reference”**
+Deep teal, mint accents, warm light surfaces, and rounded native components define LumaPath across the iPhone app, Watch companion, and public documentation. Use this system consistently for camera tools, settings, saved places, and research interfaces.
 
-The user-supplied MHS app-screen and logo sheets are the visual authority for LumaPath presentation work. Deep teal, mint accents, warm light surfaces, and rounded native components carry the identity across the iPhone app, Watch companion, and public README. This replaces the earlier illustrated lantern and flat Home entry layout.
-
-Use the teal lantern tile with cream frame, mint rays, and amber flame. Editable artwork lives in `docs/brand/lumapath-icon.svg`; `Tools/Design/render_deck.cjs` generates native and public rasters. Native system typography and SF Symbols translate the reference into SwiftUI. The deck’s Bricolage and IBM Plex faces belong to its presentation wrapper.
+Use the teal lantern tile with cream frame, mint rays, and amber flame. Editable artwork lives in `docs/brand/lumapath-icon.svg`; `Tools/Design/render_deck.cjs` generates native and public rasters. The native app uses system typography and SF Symbols. Interface illustrations use their own embedded lettering; they do not introduce native app font dependencies.
 
 **Key Characteristics:**
 
@@ -119,7 +119,7 @@ Camera imagery and detection outlines describe evidence or user rendering prefer
 
 Use SF Pro through SwiftUI’s system APIs. The wordmark is bold and rounded, using semantic `.title` in compact signatures and `.largeTitle` in full signatures. It is not implemented as a fixed 32-point wordmark. Reading, support, metadata, section, observation, and action roles use the scalable sizes recorded in frontmatter at the default content size. Reading text adds four points of line spacing; other native text keeps its system line metrics.
 
-**The Native Reading Rule.** Keep Dynamic Type unrestricted, preserve native chrome typography, and let content wrap vertically. Do not shrink accessible text to reproduce a fixed-size deck illustration. Bold Text and locale fallback remain system responsibilities.
+**The Native Reading Rule.** Keep Dynamic Type unrestricted, preserve native chrome typography, and let content wrap vertically. Do not shrink accessible text to reproduce a fixed-size interface illustration. Bold Text and locale fallback remain system responsibilities.
 
 ## Layout
 
@@ -129,7 +129,7 @@ Main primary and secondary buttons keep 64- and 56-point minimum heights. Other 
 
 ## Elevation & Depth
 
-Native shared components use opaque tonal layering and strokes rather than authored shadows. White or dark-card surfaces separate content from the canvas; selected surfaces use mint/teal tint. The deck mockups’ painted device frames and shadows belong to public illustrations and are not a native shadow vocabulary. Native navigation transitions remain system-controlled; no custom animation timing or focus-ring implementation is claimed.
+Native shared components use opaque tonal layering and strokes rather than authored shadows. White or dark-card surfaces separate content from the canvas; selected surfaces use mint/teal tint. The interface mockups’ painted device frames and shadows belong to public illustrations and are not a native shadow vocabulary. Native navigation transitions remain system-controlled; no custom animation timing or focus-ring implementation is claimed.
 
 ## Shapes
 
@@ -147,7 +147,7 @@ Find target pills use selection fill, selection text, headline typography, and a
 
 `ShellCard` uses 16-point padding and spacing, a surface fill, a decorative stroke, and an increased-contrast boundary. The Find command field uses the sunken surface, a strong outline, and 16-point padding; native text focus and keyboard behavior remain intact.
 
-`ShellNavigationLabel` places a system symbol in a sunken rounded icon tile, with title, supporting text, and a forward chevron. The accessible label and hint describe the destination. Native lists and forms retain system structures while inheriting the app’s semantic foreground, tint, and canvas. All 42 Sections apply semantic row backgrounds and section separators directly; these modifiers are not applied at the app root.
+`ShellNavigationLabel` places a system symbol in a sunken rounded icon tile, with title, supporting text, and a forward chevron. The accessible label and hint describe the destination. Native lists and forms retain system structures while inheriting the app’s semantic foreground, tint, and canvas. List and form Sections apply semantic row backgrounds and section separators directly; these modifiers are not applied at the app root.
 
 ### Live entry and Home shortcuts
 
@@ -161,13 +161,13 @@ The Watch uses a dark-default color catalog with a dark increased-contrast varia
 
 ### Public design demos
 
-README visuals come from `docs/demos/`. The six previews are supplied MHS design mockups, not app captures or physical sensing evidence. They intentionally preserve the reference’s illustrative scenes, measurements, and Watch cues. Reproduction and provenance are recorded in `docs/demos/README.md`; earlier simulator captures remain historical evidence in `docs/screenshots/`.
+README visuals come from `docs/demos/`. The six previews are interface mockups with illustrative scenes, measurements, and Watch cues. They are not physical sensing evidence. Reproduction instructions are in `docs/demos/README.md`; current native simulator captures are in `docs/screenshots/`.
 
 ## Do's and Don'ts
 
 - **Do** use shared SwiftUI components and generated semantic assets across ordinary and Research screens.
 - **Do** preserve native navigation, assistive input, unrestricted text scaling, explicit review, permissions, and unavailable states.
-- **Do** label public demo images as supplied design mockups and keep physical sensing validation separate.
+- **Do** label public demo images as interface mockups and keep physical sensing validation separate.
 - **Don't** copy mock measurements, sensor-ready badges, object results, or Watch states into runtime state.
 - **Don't** introduce a competing visual style for settings, empty states, Research, or the Watch companion.
 - **Don't** imply Routes or Community are available before they are implemented.

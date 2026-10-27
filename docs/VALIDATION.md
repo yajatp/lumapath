@@ -52,7 +52,7 @@ xcodebuild -project LumaPath.xcodeproj -scheme LumaPath \
 
 ## Interpreting the evidence
 
-`Evaluation/` retains historical technical records and synthetic data required by the release-audit tools. Records describe their original source revisions and scope. They are not a current blanket test pass. This public snapshot has fresh Git history, so historical development commit IDs are provenance references rather than public commit links.
+`Evaluation/` retains historical technical records and synthetic data required by the release-audit tools. Records describe their original source revisions and scope. They are not a current blanket test pass. Historical source revision IDs may refer to development history outside this repository; use the current commands above to reproduce checks.
 
 The release audit validates evidence structure and pending gates. A successful audit does **not** approve a production release. Empty physical-trial files and null measurements mean evidence is missing, not that a test passed.
 

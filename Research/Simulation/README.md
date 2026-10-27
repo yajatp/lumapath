@@ -4,7 +4,7 @@ The deterministic room renderer generates paired RGB JPEG, noisy axial depth, co
 
 Install `requirements.txt`, then run from the repository:
 
-```powershell
+```sh
 python -m unittest discover -s Research/Simulation -v
 python Research/Simulation/generate.py path/to/new-output-directory
 ```

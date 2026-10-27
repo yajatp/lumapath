@@ -21,8 +21,8 @@ The offline [Laya adapter](Research/Fusion/LAYA.md) documents its upstream sourc
 
 ## AI assistance
 
-The team used OpenAI Codex throughout development, including substantial code generation from team prompts. The team directed product design, testing, and debugging. Private conversations and detailed development-session logs are not published in this repository. Removing those logs does not change the project’s AI-assistance disclosure.
+The team used OpenAI Codex throughout development, including substantial code generation from team prompts. The team directed product design, testing, and debugging. The team remains responsible for reviewing generated code and interpreting test results.
 
-## MHS design reference
+## Interface illustrations and artwork
 
-The lantern artwork and public mockups in `docs/brand/` and `docs/demos/` were supplied in **LumaPath deck styled for MHS.zip**. The static gallery preserves its scene photography and bundled Bricolage Grotesque, IBM Plex Mono, Instrument Serif, and Material Symbols Rounded fonts. These are reference assets, not native app font dependencies. Upstream photograph credits and license texts were not included in the supplied archive. Import provenance and regeneration steps are recorded in [the demo guide](docs/demos/README.md).
+The lantern artwork and public mockups in `docs/brand/` and `docs/demos/` were supplied in **LumaPath deck styled for MHS.zip**. The interface illustrations render the supplied scene photographs and lettering from Bricolage Grotesque, IBM Plex Mono, Instrument Serif, and Material Symbols Rounded. The public gallery uses exported images; these font files are not native app dependencies or distributed gallery assets. Upstream photograph credits and license texts were not included in the supplied archive. Import provenance and regeneration steps are recorded in [the demo guide](docs/demos/README.md).

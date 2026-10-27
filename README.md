@@ -10,13 +10,9 @@ LumaPath is a native iPhone accessibility project for people with low vision. It
 
 Submitted to the **2026 Congressional App Challenge** by **Yajat Parmar, Aarav Bansal, Shrey Gandhi, and Sujay Billakanti**.
 
-![Platform: iOS 17+](https://img.shields.io/badge/iOS-17%2B-006B63)
-![Language: Swift](https://img.shields.io/badge/Swift-6-F05138?logo=swift&logoColor=white)
-![UI: SwiftUI](https://img.shields.io/badge/UI-SwiftUI-006B63)
-![Companion: watchOS 10+](https://img.shields.io/badge/watchOS-10%2B-172E31)
-[![Build and test](https://github.com/yajatp/lumapath/actions/workflows/build.yml/badge.svg)](https://github.com/yajatp/lumapath/actions/workflows/build.yml)
+![Platform: iOS 17+](https://img.shields.io/badge/iOS-17%2B-006B63) ![Language: Swift](https://img.shields.io/badge/Swift-6-F05138?logo=swift&logoColor=white) ![UI: SwiftUI](https://img.shields.io/badge/UI-SwiftUI-006B63) ![Companion: watchOS 10+](https://img.shields.io/badge/watchOS-10%2B-172E31) [![Build and test](https://github.com/yajatp/lumapath/actions/workflows/build.yml/badge.svg)](https://github.com/yajatp/lumapath/actions/workflows/build.yml)
 
-[Getting started](#getting-started) · [Architecture](docs/ARCHITECTURE.md) · [Validation](docs/VALIDATION.md) · [Privacy](docs/PRIVACY.md) · [Credits](THIRD_PARTY_NOTICES.md)
+[Getting started](#getting-started) · [Documentation](docs/README.md) · [Architecture](docs/ARCHITECTURE.md) · [Validation](docs/VALIDATION.md) · [Privacy](docs/PRIVACY.md) · [Credits](THIRD_PARTY_NOTICES.md)
 
 ## Why we built it
 
@@ -36,7 +32,7 @@ LumaPath’s native iPhone interface brings camera tools, Find, saved places, an
 <p>
   <img src="docs/demos/objects.png" width="240" alt="Interface mockup: illustrative object and distance overlay">
   <img src="docs/demos/accessibility.png" width="240" alt="Interface mockup: interaction style and appearance choices">
-  <img src="docs/demos/watch.png" width="200" alt="Interface mockup: Apple Watch cue screen">
+  <img src="docs/demos/watch.png" width="200" alt="Interface mockup: Apple Watch feedback preference prompt">
 </p>
 
 Interface mockups illustrate the native app and Watch companion. Example scenes, measurements, and Watch cues do not represent validated sensing results. Routes and Community remain unavailable. See [validation and limitations](docs/VALIDATION.md).
@@ -53,14 +49,14 @@ Interface mockups illustrate the native app and Watch companion. Example scenes,
 | Research tools | Deterministic replay, synthetic RGB-D room generation, model preparation, offline fusion experiments, and comparative-study accounting. |
 | Community infrastructure | A separate Python service for authenticated reports, moderation, privacy-aware projections, and backup/restore tests. Product integration and deployment remain pending. |
 
-**Research prototype:** sensing and accessory features remain experimental. Physical accuracy, accessibility usability, sustained performance, and walking guidance are not certified. Doors, stairs, and curbs are not added by the bundled 80-class detectors. Routes and Community product workflows remain unavailable. See [validation and limitations](docs/VALIDATION.md).
+**Research prototype:** object recognition, distance sensing, and accessory feedback still require physical and user testing. LumaPath does not provide validated walking guidance. Routes and Community are not available in the app. See [validation and limitations](docs/VALIDATION.md).
 
 ## Getting started
 
 ### Requirements
 
 - A Mac with Xcode. The recorded development baseline is **Xcode 26.2 / Swift 6.2.3**.
-- The iPhone target uses **iOS 17+**; the optional Watch target uses **watchOS 10+**. These are build targets, with physical compatibility still requiring validation.
+- The iPhone target uses **iOS 17+**; the optional Watch target uses **watchOS 10+**. Compatibility on physical devices still requires validation.
 - Live depth requires supported hardware. The simulator can explore UI and synthetic replay.
 
 ### Run the app
@@ -84,6 +80,7 @@ xcodebuild -project LumaPath.xcodeproj -scheme LumaPath \
 python3 -m unittest discover -s Research/Models -p 'test_*.py'
 python3 -m unittest discover -s Research/Fusion -v
 python3 -m unittest discover -s Research/Validation -v
+python3 -m unittest discover -s Tools/Design -v
 python3 -m unittest discover -s Tools/Release -p 'test_*.py' -v
 ```
 
@@ -99,21 +96,21 @@ See [the validation guide](docs/VALIDATION.md) for service, simulation, native, 
 | `Server/` | Optional community-service implementation, migrations, and authorization tests. |
 | `Tools/` | Model checks, design-asset generators, routing utilities, and release-evidence audits. |
 | `Evaluation/` | Synthetic fixtures, historical technical evidence, and explicit pending acceptance gates. |
-| `docs/` | Public guides, brand assets, design tokens, and selected simulator screenshots. |
+| `docs/` | Public guides, interface previews, native simulator captures, and brand assets. |
 
 ## Team and acknowledgments
 
 | Team member | Submitted contribution |
 | --- | --- |
-| Yajat Parmar | Camera and depth pipeline. |
+| [Yajat Parmar (@yajatp)](https://github.com/yajatp) | Camera and depth pipeline. |
 | [Aarav Bansal (@HexboxRC)](https://github.com/HexboxRC) | iPhone app and Watch companion. |
 | Shrey Gandhi | Saved places and server. |
 | Sujay Billakanti | Accessibility and testing. |
 
-**AI assistance:** OpenAI Codex assisted with substantial code generation from team prompts. The team directed the design, testing, and debugging. This public snapshot omits private development conversations and session logs; the disclosure remains part of the project’s public documentation.
+**AI assistance:** OpenAI Codex assisted with substantial code generation. The team directed product design, testing, and debugging. See [development credits](THIRD_PARTY_NOTICES.md#ai-assistance).
 
 YOLOv3 models are credited to Joseph Redmon and Ali Farhadi and distributed through Apple’s Core ML model catalog. See [third-party notices](THIRD_PARTY_NOTICES.md) for provenance and licenses.
 
 ## Source availability
 
-Source is published for review and reproducibility. No project-wide open-source license is granted in this snapshot. Third-party materials retain their own licenses and notices.
+Source is published for review and reproducibility. No project-wide open-source license is granted. Third-party materials retain their own licenses and notices.

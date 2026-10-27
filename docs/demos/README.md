@@ -1,24 +1,27 @@
-# MHS design demos
+# LumaPath interface previews
 
-These are the new public-facing design mockups, imported from the user-supplied **LumaPath deck styled for MHS.zip** on October 26, 2026. The app-screen sheet contains the v2–v4 reference iterations; README previews select the latest supplied iteration for each screen.
+Explore the native iPhone interface and optional Apple Watch companion through six illustrative mockups: Home, Find, camera adjustments, object and distance readouts, interaction preferences, and Watch cues.
 
-Open `index.html` in a browser for the complete app-screen reference, or `logos.html` for the logo sheet. Both are static, self-contained within this folder and require no server. Imported JavaScript was excluded. Fonts and two scene photographs came from the supplied archive; their upstream licensing was not provided. Do not assume that importing them grants additional rights.
+The images illustrate the interface; example measurements and cues are not validated sensing results. Routes and Community are not available in the app. See [validation and limitations](../VALIDATION.md).
 
-The six PNG previews are **design illustrations**, not captures of the running native app. Measurements, detected objects, feedback, and Watch cues shown in them do not establish physical sensing performance. Native UI continues to expose permissions, confirmation, unavailable states, and unvalidated Research features. See [validation](../VALIDATION.md).
+## Browse the previews
 
-The scene photographs are exported as bounded WebP assets; `cwebp` is required for import.
+Open [the interface gallery](index.html) or [brand assets](logos.html) locally in a browser. Both pages work without a server. When browsing on GitHub, HTML links open the source; download or clone the repository to view the rendered pages.
 
-The canonical native implementation is [DesignSystem.swift](../../LumaPath/App/DesignSystem.swift), driven by [tokens.json](../design/tokens.json). Native SF Symbols and system navigation replace the mockup's web icons and painted tab bar. Large text stacks paired Home shortcuts vertically.
+[Native simulator captures](../screenshots/) show the implemented interface separately from these mockups.
 
-To regenerate from the original supplied archive:
+## Reproduce the assets
+
+The native interface uses [shared SwiftUI components](../../LumaPath/App/DesignSystem.swift) and [semantic tokens](../design/tokens.json). Native SF Symbols, system navigation, and scalable text preserve platform behavior and accessibility.
+
+With the original design archive, `cwebp`, Google Chrome, and Playwright available to Node:
 
 ```sh
-python3 Tools/Design/import_deck.py '/path/to/LumaPath deck styled for MHS.zip'
-# With Playwright available to Node, Google Chrome and cwebp installed:
+python3 Tools/Design/import_deck.py '/path/to/design-archive.zip'
 node Tools/Design/render_deck.cjs
 python3 Tools/Design/generate_assets.py
 ```
 
-`render_deck.cjs` renders the extracted SVG into the public icon, both native app icons, and the three brand-mark resolutions. It also refreshes the six PNG previews. The editable SVG is the artwork source; the old hand-drawn icon generator has been retired.
+Run these commands from the repository root. The importer keeps the source sheets and their dependencies in the ignored `.impeccable/reference/` folder. The renderer exports the six public PNG previews, app icons, and brand-mark resolutions without replacing the public gallery pages.
 
-Current native simulator captures are in `docs/screenshots/`. They show the implemented interface, separately from the supplied public design mockups above.
+Artwork and image provenance are recorded in [third-party notices](../../THIRD_PARTY_NOTICES.md#interface-illustrations-and-artwork).

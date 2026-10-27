@@ -14,8 +14,8 @@ import tempfile
 import zipfile
 
 ROOT = Path(__file__).resolve().parents[2]
-DEST = ROOT / 'docs/demos'
-DEST.mkdir(exist_ok=True)
+DEST = ROOT / '.impeccable/reference'
+DEST.mkdir(parents=True, exist_ok=True)
 with zipfile.ZipFile(sys.argv[1]) as archive:
     pages = {}
     for name in ('LumaPath App Screens.html', 'LumaPath Logo Sheet.html'):

@@ -1,6 +1,6 @@
-# Local operations and staging handoff
+# Service operations and staging
 
-Scope: A14 local drills. No production deployment, TLS endpoint, production restore, provider rotation or rollback has been executed. Stop all service writers before any backup or restore, including deletion workers. The CLI requires --offline as an operator assertion; it cannot prove that another host/process has stopped. Store snapshots encrypted outside the repository, restrict access, and define retention/deletion/replica policies before deployment. Snapshots contain private data. SHA256 detects corruption; it is not snapshot authentication against a malicious operator.
+These procedures have been exercised locally. No production deployment, TLS endpoint, production restore, provider rotation or rollback has been executed. Stop all service writers before any backup or restore, including deletion workers. The CLI requires --offline as an operator assertion; it cannot prove that another host/process has stopped. Store snapshots encrypted outside the repository, restrict access, and define retention/deletion/replica policies before deployment. Snapshots contain private data. SHA256 detects corruption; it is not snapshot authentication against a malicious operator.
 
 ## Backup and restore
 

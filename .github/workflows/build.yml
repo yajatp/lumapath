@@ -34,8 +34,8 @@ jobs:
           "$RUNNER_TEMP/lumapath-train-detector" --help
           swiftc Research/Models/infer_evaluation.swift -o "$RUNNER_TEMP/lumapath-infer-evaluation"
           "$RUNNER_TEMP/lumapath-infer-evaluation" --help
-      - name: Ensure watch simulator platform is installed
-        run: xcodebuild -downloadPlatform watchOS
+      - name: Verify bundled Watch simulator SDK
+        run: xcodebuild -showsdks | grep -q watchsimulator
       - name: Unsigned watch simulator build
         run: xcodebuild -project LumaPath.xcodeproj -scheme LumaPathWatch -destination 'generic/platform=watchOS Simulator' CODE_SIGNING_ALLOWED=NO build
       - name: Unsigned iPhone simulator build

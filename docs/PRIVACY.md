@@ -1,6 +1,6 @@
 # Privacy and research data
 
-The public repository contains source, tests, synthetic examples, model assets with notices, and selected simulator UI screenshots. Development conversations, session logs, personal reference photos, submission drafts, signing material, local databases, and unsigned app packages are excluded.
+LumaPath’s core camera and object-recognition workflows run locally on the iPhone. The repository includes synthetic examples, interface illustrations, and simulator captures; these do not contain participant trial data.
 
 ## Local app workflows
 

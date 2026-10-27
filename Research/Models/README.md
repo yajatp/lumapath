@@ -1,6 +1,6 @@
-# A6 detector training and evaluation
+# Target detector training and evaluation
 
-A6's inference/association/goal code is implemented. **A6 is not complete:** no door, elevator-indicator or handrail detector weights or held-out training corpus have been supplied. Apple Vision OCR plus rectangle context runs locally for an experimental EXIT candidate; it does not prove a usable exit or pass target evaluation. A7 now supplies a separate Research remembered-landmark provider, requiring current accepted alignment and B7/physical acceptance.
+The local inference, depth-association, and goal-resolution tools are implemented. Target-specific detector training remains pending: no door, elevator-indicator, or handrail weights or held-out training corpus are included. Apple Vision OCR and rectangle context can produce experimental EXIT candidates; these do not establish a usable exit. Remembered landmarks use a separate research provider that requires accepted spatial alignment and physical validation.
 
 ## Sources checked on October 21, 2026
 
@@ -48,4 +48,4 @@ Before registration, finish the source/license/model card and class mapping; set
 
 ## Validation status
 
-Tool compilation and synthetic tooling tests pass. No real target model was trained, no corpus was downloaded, and no held-out accuracy/physical performance is claimed. See `Evaluation/A6-validation.md` and `model-workplan.json`.
+Tool compilation and synthetic tooling tests pass. No real target model was trained, no corpus was downloaded, and no held-out accuracy/physical performance is claimed. See [the evaluation record](../../Evaluation/A6-validation.md) and [model workplan](model-workplan.json).

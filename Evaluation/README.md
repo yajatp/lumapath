@@ -8,4 +8,4 @@ This directory contains synthetic fixtures, historical software-check records, a
 - `Studies/` contains the paired-study protocol and an empty physical-trial manifest.
 - `Community/` and `Routing/` contain synthetic schema examples.
 
-Historical technical notes retain their original scope. See [the public validation guide](../docs/VALIDATION.md) for current reproduction commands and open limitations. Personal reference images, private development conversations, and build packages are excluded from this snapshot.
+Historical technical notes retain their original scope. See [the public validation guide](../docs/VALIDATION.md) for current reproduction commands and open limitations. The records are technical evidence for review and reproducibility, rather than product demonstrations.
