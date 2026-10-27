@@ -26,13 +26,20 @@ The central principle is simple: **say “distance unavailable” rather than in
 
 ## A look inside
 
+The **MHS deck design is the new LumaPath visual standard**: deep teal, mint accents, warm light surfaces, rounded cards, and the lantern mark. The native app uses this system across Home, Find, camera tools, setup, profiles, settings, and the Watch companion. See the [design system](DESIGN.md) and [semantic tokens](docs/design/tokens.json).
+
 <p>
-  <img src="docs/screenshots/home.png" width="240" alt="LumaPath Home with live view, Find, saved places, and simulated demo">
-  <img src="docs/screenshots/find.png" width="240" alt="Find screen with typed or spoken requests and explicit confirmation">
-  <img src="docs/screenshots/settings.png" width="240" alt="LumaPath Settings with presentation and appearance controls">
+  <img src="docs/demos/home.png" width="240" alt="MHS design mockup: Home with teal live-view card and Find and Saved Places shortcuts">
+  <img src="docs/demos/find.png" width="240" alt="MHS design mockup: dark Find interface with an illustrative spoken answer">
+  <img src="docs/demos/live.png" width="240" alt="MHS design mockup: live camera tuning controls">
+</p>
+<p>
+  <img src="docs/demos/objects.png" width="240" alt="MHS design mockup: illustrative object and distance overlay">
+  <img src="docs/demos/accessibility.png" width="240" alt="MHS design mockup: interaction style and appearance choices">
+  <img src="docs/demos/watch.png" width="200" alt="MHS design mockup: Apple Watch cue screen">
 </p>
 
-*Simulator screenshots. They illustrate the interface; they do not demonstrate physical sensing performance.*
+**Design mockups from the supplied MHS deck, not app captures or sensing results.** Example scenes, measurements, and Watch cues illustrate the design direction. The app retains explicit review, permission, unavailable, and Research states. Routes and Community remain unavailable. [Mockup sources and reproduction](docs/demos/README.md) · [Current validation](docs/VALIDATION.md).
 
 ## What’s included
 
@@ -99,7 +106,7 @@ See [the validation guide](docs/VALIDATION.md) for service, simulation, native, 
 | Team member | Submitted contribution |
 | --- | --- |
 | Yajat Parmar | Camera and depth pipeline. |
-| Aarav Bansal | iPhone app and Watch companion. |
+| [Aarav Bansal (@HexboxRC)](https://github.com/HexboxRC) | iPhone app and Watch companion. |
 | Shrey Gandhi | Saved places and server. |
 | Sujay Billakanti | Accessibility and testing. |
 

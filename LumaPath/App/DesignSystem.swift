@@ -10,6 +10,7 @@ enum LumaTheme {
     static let action = Color("Luma.accent")
     static let pressedAction = Color("Luma.accent.pressed")
     static let onAction = Color("Luma.text.onAccent")
+    static let hairline = Color("Luma.separator.decorative")
     static let boundary = Color("Luma.border.strong")
     static let selection = Color("Luma.selection.fill")
     static let selectionText = Color("Luma.selection.text")
@@ -63,13 +64,13 @@ struct ShellButtonStyle: ButtonStyle {
             .padding(.horizontal, 16).padding(.vertical, 16)
             .frame(maxWidth: .infinity, minHeight: prominent ? 64 : 56)
             .foregroundStyle(foreground)
-            .background(fill(pressed: configuration.isPressed), in: RoundedRectangle(cornerRadius: 16))
+            .background(fill(pressed: configuration.isPressed), in: RoundedRectangle(cornerRadius: 24))
             .overlay {
-                RoundedRectangle(cornerRadius: 16)
+                RoundedRectangle(cornerRadius: 24)
                     .strokeBorder(prominent && isEnabled ? Color.clear : LumaTheme.boundary,
                                   lineWidth: contrast == .increased ? 2 : 1.5)
             }
-            .contentShape(RoundedRectangle(cornerRadius: 16))
+            .contentShape(RoundedRectangle(cornerRadius: 24))
     }
     private var foreground: Color {
         if !isEnabled { return Color("Luma.disabled.text") }
@@ -90,10 +91,11 @@ struct ShellCard<Content: View>: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 16) { content }
             .frame(maxWidth: .infinity, alignment: .leading).padding(16)
-            .background(LumaTheme.surface, in: RoundedRectangle(cornerRadius: 20))
+            .background(LumaTheme.surface, in: RoundedRectangle(cornerRadius: 24))
             .overlay {
-                RoundedRectangle(cornerRadius: 20)
-                    .strokeBorder(contrast == .increased ? LumaTheme.boundary : Color.clear, lineWidth: 2)
+                RoundedRectangle(cornerRadius: 24)
+                    .strokeBorder(contrast == .increased ? LumaTheme.boundary : LumaTheme.hairline,
+                                  lineWidth: contrast == .increased ? 2 : 1)
                     .allowsHitTesting(false)
             }
     }
@@ -124,7 +126,9 @@ struct ShellNavigationLabel: View {
     var body: some View {
         HStack(alignment: .center, spacing: 16) {
             Image(systemName: systemImage).font(.title2).foregroundStyle(LumaTheme.action)
-                .frame(width: iconWidth).accessibilityHidden(true)
+                .frame(width: max(44, iconWidth), height: max(44, iconWidth))
+                .background(LumaTheme.sunken, in: RoundedRectangle(cornerRadius: 18))
+                .accessibilityHidden(true)
             VStack(alignment: .leading, spacing: 8) {
                 Text(title).font(.system(size: titleSize, weight: .semibold)).foregroundStyle(LumaTheme.ink)
                 Text(subtitle).modifier(LumaSecondaryText()).foregroundStyle(LumaTheme.secondaryInk)
@@ -163,8 +167,66 @@ struct LumaBrandSignature: View {
                 .clipShape(RoundedRectangle(cornerRadius: compact ? 7 : 14))
                 .accessibilityHidden(true)
             Text("LumaPath")
-                .font(.system(compact ? .title : .largeTitle, design: .rounded, weight: .semibold))
+                .font(.system(compact ? .title : .largeTitle, design: .rounded, weight: .bold))
                 .accessibilityAddTraits(.isHeader)
         }
+    }
+}
+
+/// The deck's live-view entry point. Copy describes tools, never sensor readiness.
+struct LumaLiveEntry: View {
+    @Environment(\.dynamicTypeSize) private var typeSize
+    @ScaledMetric(relativeTo: .title2) private var titleSize = 24.0
+    var body: some View {
+        VStack(alignment: .leading, spacing: 20) {
+            if !typeSize.isAccessibilitySize {
+                HStack {
+                    Text("Camera tools").font(.subheadline.weight(.semibold))
+                    Spacer()
+                    Image(systemName: "arrow.right").accessibilityHidden(true)
+                }
+            }
+            HStack(spacing: 16) {
+                if !typeSize.isAccessibilitySize {
+                Image(systemName: "camera.fill").font(.system(size: 24))
+                    .frame(width: 56, height: 56)
+                    .foregroundStyle(LumaTheme.selectionText)
+                    .background(LumaTheme.selection, in: RoundedRectangle(cornerRadius: 18))
+                    .accessibilityHidden(true)
+                }
+                VStack(alignment: .leading, spacing: 8) {
+                    Text("Start live view").font(.system(size: titleSize, weight: .bold))
+                    Text("Brighten, adjust and explore").modifier(LumaSecondaryText())
+                }
+            }
+        }.padding(20).frame(maxWidth: .infinity, alignment: .leading)
+            .foregroundStyle(LumaTheme.onAction)
+            .background(LumaTheme.action, in: RoundedRectangle(cornerRadius: 28))
+            .contentShape(RoundedRectangle(cornerRadius: 28))
+            .accessibilityElement(children: .ignore)
+            .accessibilityLabel("Start live view")
+            .accessibilityHint("Open camera tools and image adjustments")
+    }
+}
+
+struct LumaShortcutTile: View {
+    @Environment(\.colorSchemeContrast) private var contrast
+    let title: String
+    let subtitle: String
+    let systemImage: String
+    var body: some View {
+        VStack(alignment: .leading, spacing: 20) {
+            Image(systemName: systemImage).font(.title2)
+                .foregroundStyle(LumaTheme.selectionText).frame(width: 44, height: 44)
+                .background(LumaTheme.selection, in: Circle()).accessibilityHidden(true)
+            VStack(alignment: .leading, spacing: 8) {
+                Text(title).font(.headline).foregroundStyle(LumaTheme.ink)
+                Text(subtitle).modifier(LumaSecondaryText()).foregroundStyle(LumaTheme.secondaryInk)
+            }
+        }.padding(16).frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
+            .background(LumaTheme.surface, in: RoundedRectangle(cornerRadius: 24))
+            .overlay { RoundedRectangle(cornerRadius: 24).strokeBorder(contrast == .increased ? LumaTheme.boundary : LumaTheme.hairline, lineWidth: contrast == .increased ? 2 : 1) }
+            .contentShape(RoundedRectangle(cornerRadius: 24))
+            .accessibilityElement(children: .ignore).accessibilityLabel(title).accessibilityHint(subtitle)
     }
 }

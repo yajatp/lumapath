@@ -91,8 +91,8 @@ struct StyleChoices: View {
                         Image(systemName: selection == style ? "checkmark.circle.fill" : "circle").accessibilityHidden(true)
                     }.padding(16).frame(maxWidth: .infinity, minHeight: 128, alignment: .leading)
                         .foregroundStyle(selection == style ? LumaTheme.selectionText : LumaTheme.ink)
-                        .background(selection == style ? LumaTheme.selection : LumaTheme.surface, in: RoundedRectangle(cornerRadius: 16))
-                        .overlay { RoundedRectangle(cornerRadius: 16).strokeBorder(selection == style ? LumaTheme.action : LumaTheme.boundary, lineWidth: 2) }
+                        .background(selection == style ? LumaTheme.selection : LumaTheme.surface, in: RoundedRectangle(cornerRadius: 24))
+                        .overlay { RoundedRectangle(cornerRadius: 24).strokeBorder(selection == style ? LumaTheme.action : LumaTheme.boundary, lineWidth: 2) }
                 }.buttonStyle(.plain).accessibilityLabel(style.rawValue).accessibilityHint(style.explanation)
                     .accessibilityAddTraits(selection == style ? .isSelected : [])
                     .accessibilityIdentifier("presentation.\(style.rawValue.lowercased())")
@@ -129,7 +129,7 @@ private struct PresentationSample: View {
             if style != .voice {
                 Label("Camera preview area", systemImage: "camera")
                     .frame(maxWidth: .infinity, minHeight: style == .visual ? 140 : 80)
-                    .padding(12).background(LumaTheme.sunken, in: RoundedRectangle(cornerRadius: 20))
+                    .padding(12).background(LumaTheme.sunken, in: RoundedRectangle(cornerRadius: 28))
             }
             Text("No current observations.").font(.title2.weight(.semibold))
             Text("\(style.rawValue) style keeps the same actions and sensing status.").modifier(LumaSecondaryText())

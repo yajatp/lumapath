@@ -780,7 +780,7 @@ struct LiveCameraView: View {
                             }.padding(16).frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
                                 .background(LumaTheme.sunken).foregroundStyle(LumaTheme.ink)
                         }
-                    }.clipShape(RoundedRectangle(cornerRadius: 20))
+                    }.clipShape(RoundedRectangle(cornerRadius: 28))
 
                 if presentation.style != .voice { observationPanel }
                 ShellCard {

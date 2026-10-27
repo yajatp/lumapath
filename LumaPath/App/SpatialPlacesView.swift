@@ -14,7 +14,7 @@ struct SpatialPlacesView: View {
                     Button("Reload spatial scans") { Task { await model.reload() } }.disabled(model.busy)
                 }
                 if !model.loaded && model.error == nil { ProgressView("Loading spatial scans") }
-            }
+            }.listRowBackground(LumaTheme.surface).listSectionSeparatorTint(LumaTheme.hairline)
             Section("Saved scans") {
                 if model.loaded && model.places.isEmpty {
                     Text("No spatial scans saved.").accessibilityIdentifier("spatial.empty")
@@ -29,7 +29,7 @@ struct SpatialPlacesView: View {
                         }.padding(.vertical, 8)
                     }
                 }
-            }
+            }.listRowBackground(LumaTheme.surface).listSectionSeparatorTint(LumaTheme.hairline)
             Section {
                 NavigationLink("Scan a place — Research") { SpatialScanView(original: nil) }
                     .disabled(!model.loaded || model.busy || !model.canScan)
@@ -38,7 +38,7 @@ struct SpatialPlacesView: View {
                     Text("Spatial scanning requires supported AR world tracking on a physical iPhone. Manual place notes remain available.")
                         .accessibilityIdentifier("spatial.unsupported")
                 }
-            }
+            }.listRowBackground(LumaTheme.surface).listSectionSeparatorTint(LumaTheme.hairline)
         }.scrollContentBackground(.hidden).background(LumaTheme.canvas).modifier(LumaReading()).navigationTitle("Spatial scans").navigationBarTitleDisplayMode(.inline)
             .task { await model.reload() }
     }
@@ -62,7 +62,7 @@ private struct SpatialPlaceEditor: View {
                 Text("\(original.landmarks.count) saved features. These are not user-confirmed landmark labels.")
                 Text(original.qualitySummary)
                 if let error = model.error { Text(error).accessibilityIdentifier("spatial.editError") }
-            }
+            }.listRowBackground(LumaTheme.surface).listSectionSeparatorTint(LumaTheme.hairline)
             Section {
                 Button("Save scan name") { Task { if await model.rename(original, to: name) { dismiss() } } }
                     .disabled(model.busy || name.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty || name.count > 120)
@@ -74,7 +74,7 @@ private struct SpatialPlaceEditor: View {
                 }
                 Button("Delete spatial scan", role: .destructive) { confirmation = .delete }.disabled(model.busy)
                 Button("Cancel") { dismiss() }.disabled(model.busy)
-            }.frame(minHeight: 56)
+            }.listRowBackground(LumaTheme.surface).listSectionSeparatorTint(LumaTheme.hairline).frame(minHeight: 56)
         }.scrollContentBackground(.hidden).background(LumaTheme.canvas).modifier(LumaReading()).navigationTitle("Review spatial scan").navigationBarTitleDisplayMode(.inline)
             .task { rollbackAvailable = await model.hasRollback(original) }
             .onChange(of: model.places.first(where: { $0.id == original.id })?.revision) { _, revision in
@@ -110,7 +110,7 @@ private struct SpatialScanView: View {
                     Text(model.status).accessibilityIdentifier("spatial.scanStatus")
                     if let error = model.error { Text(error) }
                     if !model.canScan { Text("AR world tracking is unavailable. Return to use manual notes.") }
-                }
+                }.listRowBackground(LumaTheme.surface).listSectionSeparatorTint(LumaTheme.hairline)
                 if let draft = model.draft {
                     Section("Review before saving") {
                         Text("Name: \(draft.name)")
@@ -120,7 +120,7 @@ private struct SpatialScanView: View {
                             Task { if await model.saveDraft(replacing: original) { dismiss() } }
                         }.disabled(model.busy)
                         Button("Discard scan draft", role: .destructive) { model.stopScan() }.disabled(model.busy)
-                    }
+                    }.listRowBackground(LumaTheme.surface).listSectionSeparatorTint(LumaTheme.hairline)
                 } else {
                     Section {
                         Button("Start stationary scan") { model.updateViewport(size: viewport.size); model.startScan() }
@@ -128,9 +128,9 @@ private struct SpatialScanView: View {
                         Button(model.capturing ? "Preparing draft…" : "Review scan") { model.reviewScan(name: name) }
                             .disabled(!model.canReview)
                         Button("Stop scan") { model.stopScan() }.disabled(!model.scanning)
-                    }
+                    }.listRowBackground(LumaTheme.surface).listSectionSeparatorTint(LumaTheme.hairline)
                 }
-                Section { Button("Cancel") { model.stopScan(); dismiss() }.disabled(model.busy) }
+                Section { Button("Cancel") { model.stopScan(); dismiss() }.disabled(model.busy) }.listRowBackground(LumaTheme.surface).listSectionSeparatorTint(LumaTheme.hairline)
             }.buttonStyle(.bordered).controlSize(.large)
                 .onChange(of: viewport.size) { _, size in model.updateViewport(size: size) }
         }.scrollContentBackground(.hidden).background(LumaTheme.canvas).modifier(LumaReading()).navigationTitle(original == nil ? "Scan a place" : "Rescan place")

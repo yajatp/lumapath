@@ -29,8 +29,8 @@ private struct FindContent: View {
                     VStack(alignment: .leading, spacing: 8) {
                         Text("Find command").font(.headline)
                         TextField("Find command", text: $model.input, prompt: Text("For example: find exit sign").foregroundStyle(LumaTheme.secondaryInk), axis: .vertical)
-                            .padding(16).background(LumaTheme.sunken, in: RoundedRectangle(cornerRadius: 16))
-                            .overlay { RoundedRectangle(cornerRadius: 16).strokeBorder(LumaTheme.boundary, lineWidth: 1.5) }
+                            .padding(16).background(LumaTheme.sunken, in: RoundedRectangle(cornerRadius: 24))
+                            .overlay { RoundedRectangle(cornerRadius: 24).strokeBorder(LumaTheme.boundary, lineWidth: 1.5) }
                             .focused($editing).accessibilityIdentifier("find.input").accessibilityLabel("Find command")
                             .textInputAutocapitalization(.sentences)
                             .onChange(of: model.input) { _, value in
@@ -57,11 +57,17 @@ private struct FindContent: View {
                 if model.snapshot.target != nil || model.paused { currentSearch }
                 VStack(alignment: .leading, spacing: 12) {
                     ShellSectionHeading("Targets", subtitle: "Exit-sign text is available only in a stationary Research trial. Other targets explain their current limits.")
-                    ForEach(GoalTarget.allCases, id: \.self) { target in
-                        Button { editing = false; model.submit("find \(FindPresentation.name(target))") } label: {
-                            ShellNavigationLabel("Find \(FindPresentation.name(target))",
-                                subtitle: FindPresentation.unavailable(target, research: false), systemImage: "magnifyingglass")
-                        }.buttonStyle(.plain)
+                    LazyVGrid(columns: [GridItem(.adaptive(minimum: typeSize.isAccessibilitySize ? 240 : 140))], spacing: 12) {
+                        ForEach(GoalTarget.allCases, id: \.self) { target in
+                            Button { editing = false; model.submit("find \(FindPresentation.name(target))") } label: {
+                                Text("Find \(FindPresentation.name(target))")
+                                    .font(.headline).padding(.horizontal, 16).padding(.vertical, 14)
+                                    .frame(maxWidth: .infinity, minHeight: 56)
+                                    .foregroundStyle(LumaTheme.selectionText)
+                                    .background(LumaTheme.selection, in: Capsule())
+                            }.buttonStyle(.plain)
+                                .accessibilityHint(FindPresentation.unavailable(target, research: false))
+                        }
                     }
                 }
                 InteractionShortcut()
@@ -75,7 +81,7 @@ private struct FindContent: View {
                                     .frame(maxWidth: .infinity, maxHeight: .infinity)
                                     .background(LumaTheme.sunken).foregroundStyle(LumaTheme.ink)
                             }
-                        }.clipShape(RoundedRectangle(cornerRadius: 20))
+                        }.clipShape(RoundedRectangle(cornerRadius: 28))
                     NavigationLink {
                         ScrollView {
                             VStack(alignment: .leading, spacing: 24) {

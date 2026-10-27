@@ -24,7 +24,7 @@ struct ProfileExerciseView: View {
             Section {
                 Text("Optional stationary preference exercise").font(.headline)
                 Text("Use these supplied synthetic images while stationary. There is no score, diagnosis, or walking task. Accepting a suggestion changes only the draft; Save changes in the editor to persist it.")
-            }
+            }.listRowBackground(LumaTheme.surface).listSectionSeparatorTint(LumaTheme.hairline)
             if kind == .contrast {
                 Section("Compare all three pairs; choose the easiest level") {
                     ForEach(0..<3, id: \.self) { index in
@@ -32,14 +32,14 @@ struct ProfileExerciseView: View {
                         candidate(contrast: order[index], label: "A")
                         candidate(contrast: order[(index+1)%3], label: "B")
                     }
-                }
+                }.listRowBackground(LumaTheme.surface).listSectionSeparatorTint(LumaTheme.hairline)
             } else if kind == .highlights {
                 Section("Compare comfort and preserved window detail") {
                     ForEach([0.25, 0.75], id: \.self) { level in
                         ProfileScenePreview(preferences: preview(highlights: level))
                         Button("Suggest compression \(level, specifier: "%.2f")") { suggestion = .highlights(level) }.frame(minHeight: 56)
                     }
-                }
+                }.listRowBackground(LumaTheme.surface).listSectionSeparatorTint(LumaTheme.hairline)
             } else if kind == .outline {
                 Section("Check the boundary in all three scenes") {
                     Picker("Outline color", selection: $color) { ForEach(OutlineColor.allCases, id: \.self) { Text($0.rawValue.readable).tag($0) } }
@@ -50,7 +50,7 @@ struct ProfileExerciseView: View {
                     Button("Boundary is distinguishable in this scene") { visibleScenes.insert(scene) }.frame(minHeight: 56)
                     Text("Scenes checked for these choices: \(visibleScenes.count) of 3")
                     Button("Suggest this outline") { suggestion = .outline(color, width) }.disabled(visibleScenes.count != 3).frame(minHeight: 56)
-                }
+                }.listRowBackground(LumaTheme.surface).listSectionSeparatorTint(LumaTheme.hairline)
             } else if kind == .placement {
                 Section("Compare information placement") {
                     ForEach(ProfileFocus.allCases, id: \.self) { focus in
@@ -58,7 +58,7 @@ struct ProfileExerciseView: View {
                         ProfileScenePreview(preferences: preview(focus: focus))
                         Button("Suggest \(focus.rawValue.readable)") { suggestion = .placement(focus) }.frame(minHeight: 56)
                     }
-                }
+                }.listRowBackground(LumaTheme.surface).listSectionSeparatorTint(LumaTheme.hairline)
             } else {
                 Section("Cue meanings") {
                     Text("Play each cue, choose what it meant, then reveal the explanation. Repeat as needed. This records completion, never a comprehension score.")
@@ -80,20 +80,20 @@ struct ProfileExerciseView: View {
                     Button("Complete cue exercise") { profile.exercises[.cues] = .completed; output.stop(); dismiss() }
                         .disabled(reviewed.count != CuePreview.allCases.count).frame(minHeight: 56)
                     Button("Stop cue") { output.stop(); played = nil }.frame(minHeight: 56)
-                }
+                }.listRowBackground(LumaTheme.surface).listSectionSeparatorTint(LumaTheme.hairline)
             }
             if suggestion != nil {
                 Section("Suggestion — not yet applied") {
                     Text("Accept this suggestion to change the draft. You can still leave the editor without saving.")
                     Button("Accept suggestion") { if let suggestion { profile.accept(suggestion) }; dismiss() }.frame(minHeight: 56)
                     Button("Discard suggestion") { suggestion = nil }.frame(minHeight: 56)
-                }
+                }.listRowBackground(LumaTheme.surface).listSectionSeparatorTint(LumaTheme.hairline)
             }
             Section {
                 Button("Repeat exercise") { resetAttempt(); profile.exercises[kind] = .notStarted }
                 Button("Reset exercise status") { resetAttempt(); profile.exercises[kind] = .notStarted }
                 Text("Repeat and reset clear this attempt and its status. Existing accepted profile choices remain until you change or reset the profile.")
-            }
+            }.listRowBackground(LumaTheme.surface).listSectionSeparatorTint(LumaTheme.hairline)
         }.scrollContentBackground(.hidden).background(LumaTheme.canvas).modifier(LumaReading()).navigationTitle(kind.rawValue.readable)
         .safeAreaInset(edge: .bottom) {
             Button("Skip exercise") { profile.exercises[kind] = .skipped; output.stop(); dismiss() }

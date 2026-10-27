@@ -10,6 +10,14 @@ class NativePaletteTests(unittest.TestCase):
         tokens = json.loads((ROOT / 'docs/design/tokens.json').read_text())
         for role in tokens['themes']['light']:
             asset = ROOT / f'LumaPath/App/Assets.xcassets/Luma.{role}.colorset/Contents.json'
+            watch_asset = ROOT / f'LumaPath/WatchApp/Assets.xcassets/Luma.{role}.colorset/Contents.json'
+            watch_variants = json.loads(watch_asset.read_text())['colors']
+            native_variants = json.loads(asset.read_text())['colors']
+            self.assertEqual(len(watch_variants), 2, role)
+            self.assertEqual(watch_variants[0]['color'], native_variants[1]['color'], role)
+            self.assertEqual(watch_variants[1]['color'], native_variants[3]['color'], role)
+            self.assertNotIn('appearances', watch_variants[0])
+            self.assertEqual(watch_variants[1]['appearances'], [{'appearance': 'contrast', 'value': 'high'}])
             variants = json.loads(asset.read_text())['colors']
             self.assertEqual(len(variants), 4, role)
             for theme, entry in zip(tokens['themes'], variants):

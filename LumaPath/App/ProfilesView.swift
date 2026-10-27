@@ -45,7 +45,7 @@ struct ProfilesView: View {
                 Text("Active profile: \(store.active?.name ?? "Neutral defaults")").accessibilityIdentifier("profile.active")
                 if let error = store.error { Text(error); Button("Retry loading profiles") { store.reload() } }
                 ForEach(store.issues, id: \.self) { Text($0) }
-            }
+            }.listRowBackground(LumaTheme.surface).listSectionSeparatorTint(LumaTheme.hairline)
             Section("Saved profiles") {
                 ForEach(store.profiles) { profile in
                     VStack(alignment: .leading) {
@@ -60,7 +60,7 @@ struct ProfilesView: View {
                 }
                 NavigationLink("New profile") { ProfileEditor(profile: VisionProfile(name: "New profile")) }
                     .frame(minHeight: 56).accessibilityIdentifier("profile.new")
-            }
+            }.listRowBackground(LumaTheme.surface).listSectionSeparatorTint(LumaTheme.hairline)
         }.scrollContentBackground(.hidden).background(LumaTheme.canvas).modifier(LumaReading()).navigationTitle("Profiles").navigationBarTitleDisplayMode(.inline)
     }
 }
@@ -76,11 +76,11 @@ struct ProfileEditor: View {
                 TextField("Profile name", text: $draft.name).accessibilityIdentifier("profile.name")
                 Text("Unsaved changes affect this preview only. Save changes to use them in a new live view.")
                 if let error = store.error { Text(error) }
-            }
+            }.listRowBackground(LumaTheme.surface).listSectionSeparatorTint(LumaTheme.hairline)
             Section("Preview — supplied synthetic scene") {
                 ProfileScenePreview(preferences: draft.preferences)
                 Text("The outlines stay aligned with their regions. Density limits visible regions; all hazard events remain eligible for the summary and enabled output channels.")
-            }
+            }.listRowBackground(LumaTheme.surface).listSectionSeparatorTint(LumaTheme.hairline)
             Section("Optional stationary exercises") {
                 ForEach(ExerciseKind.allCases, id: \.self) { kind in
                     NavigationLink("\(kind.rawValue.readable): \((draft.exercises[kind] ?? .notStarted).rawValue.readable)") {
@@ -88,7 +88,7 @@ struct ProfileEditor: View {
                     }.frame(minHeight: 56).accessibilityIdentifier("exercise.\(kind.rawValue)")
                 }
                 Text("Skip any exercise. Results are comfort and presentation preferences, not diagnoses. No walking, acuity measurement, or answer upload.")
-            }
+            }.listRowBackground(LumaTheme.surface).listSectionSeparatorTint(LumaTheme.hairline)
             Section("Image and glare comfort") {
                 number("Exposure (EV)", key: .exposure, path: \.exposure, range: -1...2)
                 number("Contrast", key: .contrast, path: \.contrast, range: 0.5...2)
@@ -112,14 +112,14 @@ struct ProfileEditor: View {
                         for key in [ProfileKey.exposure, .contrast, .highlights] { draft.sources[key] = .preset }
                     }.frame(minHeight: 56)
                 }
-            }
+            }.listRowBackground(LumaTheme.surface).listSectionSeparatorTint(LumaTheme.hairline)
             Section("Outlines and information") {
                 number("Outline width (points)", key: .outlineWidth, path: \.outlineWidth, range: 2...10)
                 choice("Outline color", key: .outlineColor, path: \.outlineColor, values: OutlineColor.allCases)
                 Toggle("Dark backing stroke", isOn: binding(.dualStroke, \.dualStroke))
                 Stepper("Visible regions: \(draft.preferences.density)", value: binding(.density, \.density), in: 1...5).frame(minHeight: 56)
                 choice("Visual focus", key: .focus, path: \.focus, values: ProfileFocus.allCases)
-            }
+            }.listRowBackground(LumaTheme.surface).listSectionSeparatorTint(LumaTheme.hairline)
             Section("Output preferences") {
                 choice("Optional speech detail", key: .speechDetail, path: \.speechDetail, values: ProfileSpeechDetail.allCases)
                 Text(draft.preferences.speechDetail == .minimal ? "Optional text preview: Window on the right."
@@ -131,7 +131,7 @@ struct ProfileEditor: View {
                 Toggle("Prefer spatial cues", isOn: binding(.spatialCues, \.spatialCues))
                 Text("Spatial preference is applied only in Research with stereo headphones and a current, explicitly confirmed phone-forward reference. Saved phone preferences are capability checked on entry to Live view; Research remains off until explicitly enabled.")
                 NavigationLink("Phone cue preview") { FeedbackPreviewView() }
-            }
+            }.listRowBackground(LumaTheme.surface).listSectionSeparatorTint(LumaTheme.hairline)
             Section("Mobility preferences — saved for route integration") {
                 Toggle("Avoid stairs", isOn: binding(.avoidStairs, \.avoidStairs))
                 Toggle("Set required route width", isOn: Binding(get: { draft.preferences.requiredWidth != nil }, set: {
@@ -146,18 +146,18 @@ struct ProfileEditor: View {
                 choice("Surface preference", key: .surface, path: \.surface, values: SurfacePreference.allCases)
                 choice("Anticipation preference", key: .anticipation, path: \.anticipation, values: AnticipationPreference.allCases)
                 Text("These choices do not alter measured geometry or remove close-hazard events. Route and advanced anticipation product integration remains pending.")
-            }
+            }.listRowBackground(LumaTheme.surface).listSectionSeparatorTint(LumaTheme.hairline)
             Section("Preference sources") {
                 DisclosureGroup("How these choices were set") {
                     ForEach(ProfileKey.allCases, id: \.self) { key in
                         Text("\(key.rawValue.readable): \((draft.sources[key] ?? .preset).rawValue.readable)")
                     }
                 }
-            }
+            }.listRowBackground(LumaTheme.surface).listSectionSeparatorTint(LumaTheme.hairline)
             Section {
                 Button("Reset this profile") { draft.reset() }.frame(minHeight: 56)
                 Text("Reset affects this draft’s settings and exercise statuses. Name, other profiles, places and reports are preserved. Save to keep the reset.")
-            }
+            }.listRowBackground(LumaTheme.surface).listSectionSeparatorTint(LumaTheme.hairline)
         }.scrollContentBackground(.hidden).background(LumaTheme.canvas).modifier(LumaReading()).navigationTitle("Edit profile").navigationBarTitleDisplayMode(.inline)
         .safeAreaInset(edge: .bottom) {
             Button("Save changes") { if store.save(draft) { dismiss() } }

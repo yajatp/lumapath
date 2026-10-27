@@ -131,16 +131,19 @@ struct LumaPathApp: App {
                 VStack(alignment: .leading, spacing: 16) {
                     Text("Choose what you’d like to do.").foregroundStyle(LumaTheme.secondaryInk)
                     NavigationLink { LiveCameraView(profile: profiles.active).onAppear { store.send(.end) } } label: {
-                        Label("Start live view", systemImage: "camera")
-                    }.buttonStyle(ShellButtonStyle(prominent: true))
+                        LumaLiveEntry()
+                    }.buttonStyle(.plain)
                     Text("Camera tools and image adjustments. Research sensing is unvalidated; no walking guidance.")
                         .modifier(LumaSecondaryText()).foregroundStyle(LumaTheme.secondaryInk)
-                    Button { store.select(.find) } label: {
-                        ShellNavigationLabel("Find something", subtitle: "Type or speak a command, then review it", systemImage: "magnifyingglass")
-                    }.buttonStyle(.plain)
-                    NavigationLink { places } label: {
-                        ShellNavigationLabel("Saved places", subtitle: "Place notes and historical spatial scans", systemImage: "mappin.and.ellipse")
-                    }.buttonStyle(.plain)
+                    let columns = Array(repeating: GridItem(.flexible(), alignment: .top), count: typeSize.isAccessibilitySize ? 1 : 2)
+                    LazyVGrid(columns: columns, spacing: 12) {
+                        Button { store.select(.find) } label: {
+                            LumaShortcutTile(title: "Find something", subtitle: "Type or speak a command, then review it", systemImage: "magnifyingglass")
+                        }.buttonStyle(.plain)
+                        NavigationLink { places } label: {
+                            LumaShortcutTile(title: "Saved places", subtitle: "Place notes and historical spatial scans", systemImage: "mappin.and.ellipse")
+                        }.buttonStyle(.plain)
+                    }
                 }
                 VStack(alignment: .leading, spacing: 12) {
                     Button("Start demo") { store.send(.startDemo) }
@@ -174,10 +177,6 @@ struct LumaPathApp: App {
                         NavigationLink { EnhancementPreviewView() } label: {
                             ShellNavigationLabel("Enhancement preview", subtitle: "Try adjustments on a sample image", systemImage: "slider.horizontal.3")
                         }
-                        Divider()
-                        NavigationLink { settings } label: {
-                            ShellNavigationLabel("Settings", subtitle: "Appearance, devices, privacy and Research", systemImage: "gearshape")
-                        }
                     }
                 }
             }.padding(.horizontal, 24).padding(.vertical, 16)
@@ -185,6 +184,11 @@ struct LumaPathApp: App {
             .toolbar {
                 ToolbarItem(placement: .principal) {
                     LumaBrandSignature(compact: true)
+                }
+                ToolbarItem(placement: .topBarTrailing) {
+                    NavigationLink { settings } label: {
+                        Image(systemName: "gearshape").frame(minWidth: 44, minHeight: 44)
+                    }.accessibilityLabel("Settings")
                 }
             }
     }
@@ -275,25 +279,25 @@ struct LumaPathApp: App {
                 }.buttonStyle(ShellButtonStyle()).accessibilityIdentifier("interface.change")
                 Text("Switching returns to Home and ends the active session. Export recordings before changing. Developer shows Research tools; each feature still needs its own opt-in.")
                     .modifier(LumaSecondaryText()).foregroundStyle(LumaTheme.secondaryInk)
-            }
+            }.listRowBackground(LumaTheme.surface).listSectionSeparatorTint(LumaTheme.hairline)
             Section("Interaction and appearance") {
                 Button { editPresentation = true } label: {
                     ShellNavigationLabel("Interaction and appearance", subtitle: "\(presentation.style.rawValue) · \(presentation.appearance.rawValue)", systemImage: "textformat.size")
                 }.buttonStyle(.plain)
                 Text("Use iPhone Accessibility settings for Dynamic Type, Bold Text, Increase Contrast and system assistive input.")
                     .modifier(LumaSecondaryText()).foregroundStyle(LumaTheme.secondaryInk)
-            }
+            }.listRowBackground(LumaTheme.surface).listSectionSeparatorTint(LumaTheme.hairline)
             Section("Personalization") {
                 NavigationLink("Profiles") { ProfilesView().onAppear { store.send(.end) } }
                 NavigationLink("Enhancement preview") { EnhancementPreviewView() }
                 NavigationLink("Phone cue preview") { FeedbackPreviewView().onAppear { store.send(.end) } }
                 NavigationLink("Preview profile and cues") { profile }
-            }
+            }.listRowBackground(LumaTheme.surface).listSectionSeparatorTint(LumaTheme.hairline)
             Section("Devices and privacy") {
                 NavigationLink("Mount and accessory setup") { AccessoriesView().onAppear { store.send(.end) } }
                 NavigationLink("On this device") { privacy }
                 NavigationLink("About LumaPath") { about }
-            }
+            }.listRowBackground(LumaTheme.surface).listSectionSeparatorTint(LumaTheme.hairline)
             if interfaceMode.developer { Section("Diagnostics and Research") {
                 Text("Deliberate opt-in tools for stationary trials. These do not provide walking guidance.")
                     .modifier(LumaSecondaryText()).foregroundStyle(LumaTheme.secondaryInk)
@@ -301,7 +305,7 @@ struct LumaPathApp: App {
                     .accessibilityIdentifier("capture.diagnostics")
                 NavigationLink("Geometry research") { GeometryResearchView().onAppear { store.send(.end) } }
                     .accessibilityIdentifier("geometry.research")
-            } }
+            }.listRowBackground(LumaTheme.surface).listSectionSeparatorTint(LumaTheme.hairline) }
         }.listStyle(.insetGrouped).scrollContentBackground(.hidden)
             .scrollContentBackground(.hidden).background(LumaTheme.canvas).modifier(LumaReading()).navigationTitle("Settings").navigationBarTitleDisplayMode(.inline)
     }
@@ -310,12 +314,12 @@ struct LumaPathApp: App {
             Section("Saved locally") {
                 Text("Interaction style and appearance stay on this device. Profiles and manual place notes are saved separately when you explicitly save them.")
                 Text("Spatial scans are historical records stored on this device. They do not establish your current location.")
-            }
+            }.listRowBackground(LumaTheme.surface).listSectionSeparatorTint(LumaTheme.hairline)
             Section("Camera, speech and Research") {
                 Text("Ordinary live images and observations are not saved or uploaded. On-device speech starts only after you choose Speak command and access is available.")
                 Text("Research recordings are an explicit exception: consented camera/depth samples remain in memory until you export or delete them. Sharing an export is your choice.")
                 Text("Choosing an interaction style grants no permissions and enables no feedback channels. Phone-only local tools do not require an account.")
-            }
+            }.listRowBackground(LumaTheme.surface).listSectionSeparatorTint(LumaTheme.hairline)
         }.scrollContentBackground(.hidden).background(LumaTheme.canvas).modifier(LumaReading()).navigationTitle("On this device").navigationBarTitleDisplayMode(.inline)
     }
     private var about: some View {
@@ -386,7 +390,7 @@ private struct ProfilePreviewView: View {
                 Text(draft.speechDetail == .minimal ? "Sample text: Obstacle ahead."
                      : draft.speechDetail == .standard ? "Sample text: Obstacle ahead, about two meters."
                      : "Sample text: A simulated obstacle is ahead, about two meters away. Its type is unknown.")
-            }
+            }.listRowBackground(LumaTheme.surface).listSectionSeparatorTint(LumaTheme.hairline)
             Section("Cue vocabulary — text preview") {
                 Picker("Cue meaning", selection: $cue) {
                     ForEach(CuePreview.allCases, id: \.self) { Text($0.title).tag($0) }
@@ -394,12 +398,12 @@ private struct ProfilePreviewView: View {
                 Text(cue.example)
                 Text("Proposed haptic pattern: \(cue.pattern).")
                 Text("No audio or haptic playback occurs. Cue comprehension has not been validated.")
-            }
+            }.listRowBackground(LumaTheme.surface).listSectionSeparatorTint(LumaTheme.hairline)
             Section {
                 Button("Keep preview choices") { apply(draft); dismiss() }
                 Button("Reset preview") { draft = PresentationPreferences(); cue = .obstacle }
                 Button("Skip preview") { dismiss() }
-            }.buttonStyle(ShellButtonStyle())
+            }.listRowBackground(LumaTheme.surface).listSectionSeparatorTint(LumaTheme.hairline).buttonStyle(ShellButtonStyle())
         }.scrollContentBackground(.hidden).background(LumaTheme.canvas).modifier(LumaReading()).navigationTitle("Profile preview").navigationBarTitleDisplayMode(.inline)
     }
 }
@@ -465,7 +469,7 @@ private struct ManualPlacesView: View {
                         .frame(minHeight: 56).disabled(store.busy)
                 }
                 if !store.loaded && store.error == nil { ProgressView("Loading place notes") }
-            }
+            }.listRowBackground(LumaTheme.surface).listSectionSeparatorTint(LumaTheme.hairline)
             Section("Manual place notes") {
                 if store.loaded && store.notes.isEmpty {
                     ContentUnavailableView("No place notes saved", systemImage: "mappin.and.ellipse", description: Text("Save a name and a useful note. Manual notes do not need camera or location access."))
@@ -482,7 +486,7 @@ private struct ManualPlacesView: View {
                         }.padding(.vertical, 8)
                     }.accessibilityIdentifier("place.\(note.id.uuidString)")
                 }
-            }
+            }.listRowBackground(LumaTheme.surface).listSectionSeparatorTint(LumaTheme.hairline)
         }
         .scrollContentBackground(.hidden).background(LumaTheme.canvas).modifier(LumaReading()).navigationTitle("Saved places").navigationBarTitleDisplayMode(.inline)
         .toolbar {
@@ -526,13 +530,13 @@ private struct ManualPlaceEditor: View {
                 Text("Name: \(name.count)/80 characters. Notes: \(text.count)/2,000.").modifier(LumaMetadataText())
                 Text("Changes stay in this draft until you choose Save note. Cancel discards the draft.")
                 if let error = store.error { Text(error).accessibilityIdentifier("place.error") }
-            }
+            }.listRowBackground(LumaTheme.surface).listSectionSeparatorTint(LumaTheme.hairline)
             if let original {
                 Section("Saved record") {
                     Text("Last saved: \(original.updatedAt.formatted(date: .abbreviated, time: .shortened))")
                     Button("Delete place note", role: .destructive) { focused = nil; confirmDelete = true }
                         .frame(minHeight: 56).disabled(store.busy).accessibilityIdentifier("place.delete")
-                }
+                }.listRowBackground(LumaTheme.surface).listSectionSeparatorTint(LumaTheme.hairline)
             }
         }
         .scrollContentBackground(.hidden).background(LumaTheme.canvas).modifier(LumaReading()).navigationTitle(original == nil ? "Add place note" : "Edit place note")

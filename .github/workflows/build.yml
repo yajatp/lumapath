@@ -13,6 +13,11 @@ jobs:
           xcodegen --version | grep '2.46.0'
           xcodegen generate
           git diff --exit-code -- LumaPath.xcodeproj
+      - name: Native design palette and contrast
+        run: |
+          python3 Tools/Design/generate_assets.py
+          git diff --exit-code -- LumaPath/App/Assets.xcassets LumaPath/WatchApp/Assets.xcassets
+          python3 -m unittest discover -s Tools/Design -v
       - name: Domain, sensing, geometry, hazard, and goal tests
         run: swift test
       - name: Model data and evaluation checks

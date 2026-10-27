@@ -57,6 +57,10 @@ final class RedesignJourneyTests: XCTestCase {
         XCTAssertTrue(app.buttons["Start live view"].waitForExistence(timeout: 5))
         XCTAssertFalse(app.buttons["Skip setup"].exists)
         capture("Home-dark", app)
+        app.buttons["Settings"].tap()
+        capture("Settings-dark", app)
+        app.buttons["Profiles"].tap()
+        capture("Profiles-dark", app)
     }
 
     @MainActor func testPreviewCancelAndApplyPreservePausedDemo() {

@@ -19,7 +19,10 @@ extension XCUIApplication {
     @MainActor func scrollContentDown() { contentScroller.swipeDown() }
     @MainActor private var contentScroller: XCUIElement {
         for query in [scrollViews, collectionViews, tables] {
-            if let candidate = query.allElementsBoundByIndex.last(where: { $0.isHittable }) { return candidate }
+            // Re-evaluate the live query after navigation instead of retaining a
+            // snapshot index that can disappear with the outgoing scroll view.
+            let candidate = query.firstMatch
+            if candidate.isHittable { return candidate }
         }
         return self
     }

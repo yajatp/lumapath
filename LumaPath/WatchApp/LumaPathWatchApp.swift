@@ -11,12 +11,16 @@ import LumaPathAccessories
         WindowGroup {
             ScrollView {
                 VStack(alignment: .leading, spacing: 12) {
-                    Text("LumaPath Research").font(.headline)
-                    Text(model.status)
-                    Text(model.cueText).accessibilityIdentifier("watch.cue")
+                    Text("LumaPath").font(.system(.title3, design: .rounded, weight: .bold))
+                    Text("Research").font(.caption).foregroundStyle(Color("Luma.text.secondary"))
+                    Text(model.status).font(.callout).foregroundStyle(Color("Luma.text.secondary"))
+                    Text(model.cueText).font(.title3.weight(.semibold))
+                        .frame(maxWidth: .infinity, alignment: .leading).padding(16)
+                        .background(Color("Luma.surface"), in: RoundedRectangle(cornerRadius: 24))
+                        .accessibilityIdentifier("watch.cue")
                     Toggle("Research cues", isOn: $model.enabled)
                     Text("Phone-forward directions, not walking directions. Phone alerts work without this watch.")
-                    Button("Pause both") { model.pause() }
+                    Button("Pause both") { model.pause() }.buttonStyle(.borderedProminent)
                     Text("Preview: one tap = attention. Read the cue meaning; no directional haptic code is validated.")
                     ForEach(WatchCueKind.allCases, id: \.self) { kind in
                         Button("Preview \(kind.rawValue)") { model.preview(kind) }
@@ -24,6 +28,10 @@ import LumaPathAccessories
                     Text("Preview only. A system tap already issued cannot be retracted. No queued patterns.").font(.footnote)
                 }.padding()
             }
+            .foregroundStyle(Color("Luma.text.primary"))
+            .tint(Color("Luma.accent"))
+            .background(Color("Luma.background"))
+            .preferredColorScheme(.dark)
             .onAppear { model.foreground = phase == .active }
             .onChange(of: phase) { _, value in model.foreground = value == .active }
             .task {

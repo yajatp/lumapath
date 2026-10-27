@@ -24,3 +24,18 @@ for role in tokens['themes']['light']:
     folder = assets / f'Luma.{role}.colorset'
     folder.mkdir(exist_ok=True)
     (folder / 'Contents.json').write_text(json.dumps({'colors': colors, 'info': {'author': 'xcode', 'version': 1}}, indent=2) + '\n')
+
+# Watch is a separate target, so its catalog must carry the same semantic roles.
+watch_assets = ROOT / 'LumaPath/WatchApp/Assets.xcassets'
+for folder in assets.glob('Luma.*.colorset'):
+    # watchOS presents this companion in a dark environment. Use a dark default
+    # instead of relying on iOS luminosity matching or preferredColorScheme.
+    variants = json.loads((folder / 'Contents.json').read_text())
+    dark = variants['colors'][1].copy()
+    dark.pop('appearances', None)
+    high = variants['colors'][3].copy()
+    high['appearances'] = [{'appearance': 'contrast', 'value': 'high'}]
+    variants['colors'] = [dark, high]
+    target = watch_assets / folder.name
+    target.mkdir(exist_ok=True)
+    (target / 'Contents.json').write_text(json.dumps(variants, indent=2) + '\n')
