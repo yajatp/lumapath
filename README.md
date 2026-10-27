@@ -26,20 +26,20 @@ The central principle is simple: **say “distance unavailable” rather than in
 
 ## A look inside
 
-The **MHS deck design is the new LumaPath visual standard**: deep teal, mint accents, warm light surfaces, rounded cards, and the lantern mark. The native app uses this system across Home, Find, camera tools, setup, profiles, settings, and the Watch companion. See the [design system](DESIGN.md) and [semantic tokens](docs/design/tokens.json).
+LumaPath’s native iPhone interface brings camera tools, Find, saved places, and accessibility preferences together, with light and dark appearances and an optional Apple Watch companion.
 
 <p>
-  <img src="docs/demos/home.png" width="240" alt="MHS design mockup: Home with teal live-view card and Find and Saved Places shortcuts">
-  <img src="docs/demos/find.png" width="240" alt="MHS design mockup: dark Find interface with an illustrative spoken answer">
-  <img src="docs/demos/live.png" width="240" alt="MHS design mockup: live camera tuning controls">
+  <img src="docs/demos/home.png" width="240" alt="Interface mockup: Home with teal live-view card and Find and Saved Places shortcuts">
+  <img src="docs/demos/find.png" width="240" alt="Interface mockup: dark Find interface with an illustrative spoken answer">
+  <img src="docs/demos/live.png" width="240" alt="Interface mockup: live camera tuning controls">
 </p>
 <p>
-  <img src="docs/demos/objects.png" width="240" alt="MHS design mockup: illustrative object and distance overlay">
-  <img src="docs/demos/accessibility.png" width="240" alt="MHS design mockup: interaction style and appearance choices">
-  <img src="docs/demos/watch.png" width="200" alt="MHS design mockup: Apple Watch cue screen">
+  <img src="docs/demos/objects.png" width="240" alt="Interface mockup: illustrative object and distance overlay">
+  <img src="docs/demos/accessibility.png" width="240" alt="Interface mockup: interaction style and appearance choices">
+  <img src="docs/demos/watch.png" width="200" alt="Interface mockup: Apple Watch cue screen">
 </p>
 
-**Design mockups from the supplied MHS deck, not app captures or sensing results.** Example scenes, measurements, and Watch cues illustrate the design direction. The app retains explicit review, permission, unavailable, and Research states. Routes and Community remain unavailable. [Mockup sources and reproduction](docs/demos/README.md) · [Current validation](docs/VALIDATION.md).
+Interface mockups illustrate the native app and Watch companion. Example scenes, measurements, and Watch cues do not represent validated sensing results. Routes and Community remain unavailable. See [validation and limitations](docs/VALIDATION.md).
 
 ## What’s included
 
