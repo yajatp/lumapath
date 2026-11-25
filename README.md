@@ -35,7 +35,7 @@ LumaPath’s native iPhone interface brings camera tools, Find, saved places, an
   <img src="docs/demos/watch.png" width="200" alt="Interface mockup: Apple Watch feedback preference prompt">
 </p>
 
-Interface mockups illustrate the native app and Watch companion. Example scenes, measurements, and Watch cues do not represent validated sensing results. Routes and Community remain unavailable. See [validation and limitations](docs/VALIDATION.md).
+These mockups illustrate the native app and Watch companion. Explore the captured [iPhone home screen](docs/screenshots/home.png), [Find view](docs/screenshots/find.png), [settings](docs/screenshots/settings.png), and [Watch companion](docs/screenshots/watch.png) from the simulator. See the [validation guide](docs/VALIDATION.md) for the current sensing evidence and the status of Routes and Community.
 
 ## What’s included
 
