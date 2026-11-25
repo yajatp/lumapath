@@ -24,8 +24,19 @@ final class FeedbackJourneyTests: XCTestCase {
         reveal("Start live view", in: app); app.buttons["Start live view"].tap()
         XCTAssertTrue(app.staticTexts["feedback.channels"].waitForExistence(timeout: 5))
         XCTAssertEqual(app.staticTexts["feedback.channels"].label, "Visual view only; alerts muted")
-        reveal("Sensing status: not started", in: app); app.buttons["Sensing status: not started"].tap()
-        XCTAssertEqual(app.staticTexts["quality.summary"].label, "Sensing has not started.")
+        let status = app.buttons["Sensing status: not started"]
+        // The pinned controls can cover a row that XCTest reports as hittable.
+        let controls = app.buttons["Start live view"]
+        for _ in 0..<10 {
+            if status.isHittable && status.frame.maxY < controls.frame.minY { break }
+            app.scrollContentUp()
+        }
+        XCTAssertTrue(status.isHittable)
+        XCTAssertLessThan(status.frame.maxY, controls.frame.minY)
+        status.tap()
+        let summary = app.staticTexts["quality.summary"]
+        XCTAssertTrue(summary.waitForExistence(timeout: 5))
+        XCTAssertEqual(summary.label, "Sensing has not started.")
         XCTAssertTrue(app.buttons["Help"].isHittable)
         XCTAssertTrue(app.buttons["End live view"].isHittable)
         app.buttons["Help"].tap()
