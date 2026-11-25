@@ -9,9 +9,13 @@ jobs:
       - uses: actions/checkout@v4
       - name: Verify generated project with XcodeGen 2.46.0
         run: |
-          brew install xcodegen
-          xcodegen --version | grep '2.46.0'
-          xcodegen generate
+          curl --fail --silent --show-error --location --retry 3 \
+            https://github.com/yonaskolb/XcodeGen/releases/download/2.46.0/xcodegen.zip \
+            --output "$RUNNER_TEMP/xcodegen.zip"
+          printf '%s  %s\n' 4d9e34b62172d645eed6457cac13fc222569974098ef4ee9c3368bedf0196806 \
+            "$RUNNER_TEMP/xcodegen.zip" | shasum -a 256 -c -
+          unzip -q "$RUNNER_TEMP/xcodegen.zip" -d "$RUNNER_TEMP"
+          "$RUNNER_TEMP/xcodegen/bin/xcodegen" generate
           git diff --exit-code -- LumaPath.xcodeproj
       - name: Native design palette and contrast
         run: |
